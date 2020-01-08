@@ -374,7 +374,7 @@ export const newRun = functions.https.onRequest((request, response) => {
         shuffleMateria(materia);
         materia = materia.slice(0, 7);
 
-        let db = admin.firestore();
+        const db = admin.firestore();
         db.collection("runs").add({
             date: admin.firestore.FieldValue.serverTimestamp(),
             materia: materia

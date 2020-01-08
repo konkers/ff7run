@@ -1,3 +1,14 @@
-<p>generate works!</p>
-<button (click)="onNewRun()">New Run</button>
-{{ resp?.id}}
+<header class="docs-header-background" [class.is-next-version]="isNextVersion">
+    <div class="docs-header-section">
+        <div class="docs-header-headline">
+            <h1 class="mat-h1">Lucky Seven</h1>
+            <h2>A Final Fantasy VII Challenge Run</h2>
+        </div>
+        <div class="docs-header-start">
+            <button mat-raised-button *ngIf="!requesting" (click)="onNewRun()">New Run</button>
+            {{ resp?.id}}
+
+            <mat-progress-spinner *ngIf="requesting" mode="indeterminate"></mat-progress-spinner>
+        </div>
+    </div>
+</header>

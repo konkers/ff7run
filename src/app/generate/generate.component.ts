@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Observable, from } from 'rxjs';
 
-import { Materia, MATERIA_LIST } from 'materia';
 import { AddRunResponse, RunsService } from '../runs.service';
 
 @Component({
@@ -12,18 +12,20 @@ import { AddRunResponse, RunsService } from '../runs.service';
 })
 export class GenerateComponent implements OnInit {
 
-  materia: Materia[] = MATERIA_LIST;
-  resp: AddRunResponse;
+  requesting = false;
 
-  constructor(private runsSvc: RunsService) {
+  constructor(
+    private router: Router,
+    private runsSvc: RunsService) {
   }
 
   ngOnInit() {
   }
 
   onNewRun() {
+    this.requesting = true;
     this.runsSvc.newRun().subscribe(resp => {
-      this.resp = resp;
+      this.router.navigate([`/run/${resp.id}`]);
     });
   }
 
