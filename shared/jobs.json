@@ -1,0 +1,172 @@
+[
+    {
+        "name": "White Wizard",
+        "desc": "This job/class is meant to emulate what you might expect a White Mage to be in other Final Fantasy games. Consider Porom or Rosa to be the basis.",
+        "materia": [
+            "Restore",
+            "Heal",
+            "Revive",
+            "Transform",
+            "Mystify",
+            "Time",
+            "Barrier",
+            "Exit",
+            "Shield",
+            "Sense",
+            "X-Magic",
+            "MP Plus",
+            "Magic Plus",
+            "All",
+            "Full Cure"
+        ]
+    },
+    {
+        "name": "Pyromancer",
+        "desc": "A more limited class specializing in fire based abilities, and fire based abilities alone.",
+        "materia": [
+            "Fire",
+            "Ifrit",
+            "Phoenix",
+            "All",
+            "Elemental",
+            "Magic Counter",
+            "Magic Plus",
+            "MP Plus"
+        ]
+    },
+    {
+        "name": "Elsamancer",
+        "desc": "A cheap excuse to reference Frozen. I mean, a counter to the Pyromancer that focuses on Ice based magics instead of Fire. Also since logically water can be manipulated there is cause to give this class the Underwater Materia on the argument that they can merely freeze the water around them to avoid drowning.",
+        "materia": [
+            "Ice",
+            "MP Plus",
+            "Magic Plus",
+            "Underwater",
+            "Shiva",
+            "All",
+            "Elemental"
+        ]
+    },
+    {
+        "name": "Rogue",
+        "desc": "the idea is something similar to what you might expect a WoW Rogue to be, with a loose base off of Locke from FF6.",
+        "materia": [
+            "Poison",
+            "Exit",
+            "Steal",
+            "Counter",
+            "Speed Plus",
+            "Luck Plus",
+            "Gil Plus",
+            "Added Effect",
+            "Steal As Well",
+            "Sneak Attack"
+        ]
+    },
+    {
+        "name": "Engineer",
+        "desc": "Consider to be a semi-altered play off of the Pyromancer, and Elsamancer classes. The idea is they still use bolt magic based stuff, but also can do stuff like use a defribulator to revive people, as well as manipulating their speed via ...well zapping the crap out of them with varied voltage.",
+        "materia": [
+            "Lightning",
+            "Revive",
+            "Time",
+            "MP Plus",
+            "Magic Plus",
+            "Ramuh",
+            "All",
+            "Elemental"
+        ]
+    },
+    {
+        "name": "Blue Mage",
+        "desc": "A character class which primarily focuses on the learning of enemy attacks and delivering them upon the enemy in return. Enemy Lure is available for sanity purposes when attempting to get that one god damn skill.",
+        "materia": [
+            "Enemy Skill",
+            "MP Plus",
+            "Enemy Lure",
+            "MP Absorb"
+        ]
+    },
+    {
+        "name": "Black Wizard",
+        "desc": "The counter to the White Wizard class, which instead specializes in black magic styles.",
+        "materia": [
+            "Fire",
+            "Ice",
+            "Lightning",
+            "Poison",
+            "Earth",
+            "Comet",
+            "Ultima",
+            "MP Plus",
+            "Magic Plus",
+            "All",
+            "X-Magic",
+            "Quadra Magic",
+            "Magic Counter",
+            "MP Turbo"
+        ]
+    },
+    {
+        "name": "Summoner",
+        "desc": "The Rydia class. This class gets summoning ability, and not a whole lot else. Some summons were left out to ensure this isn't just the \"can use all red\" class, and to provide some uniqueness to classes they're exclusive to.",
+        "materia": [
+            "Choco/Mog",
+            "Ifrit",
+            "Shiva",
+            "Ramuh",
+            "Titan",
+            "Odin",
+            "Kjata",
+            "Bahamut",
+            "Alexander",
+            "Neo Bahamut",
+            "Hades",
+            "Bahamut ZERO",
+            "Typoon",
+            "Magic Plus",
+            "MP Plus"
+        ]
+    },
+    {
+        "name": "Paladin",
+        "desc": "A holy knight. This class has some healing ability, along with primarily battle commands and protection based stuff. This class also is the sole user of KOTR, as it seemed to make sense for a holy knight to be able to summon what is essentially the Knights of the Round Table.",
+        "materia": [
+            "Restore",
+            "Cover",
+            "Knights of the Round",
+            "HP Plus",
+            "Revive",
+            "Deathblow",
+            "Barrier"
+        ]
+    },
+    {
+        "name": "Mime",
+        "desc": "...It's a mime? Exp Plus also available to a) provide one reason why you MIGHT want one, and be it makes sense in concept because who's learning quicker than a god damn mime? Likewise the plus materia is allowed under the concept that they're trying to emulate the stats of the person they're copying.",
+        "materia": [
+            "Mime",
+            "Exp Plus",
+            "Speed Plus",
+            "Magic Plus",
+            "Luck Plus",
+            "MP Plus",
+            "HP Plus"
+        ]
+    },
+    {
+        "name": "Magic Knight",
+        "desc": "Based off of a suggestion by Fu, this class attempts to emulate the class of the same name from FFV.",
+        "materia": [
+            "Ice",
+            "Lightning",
+            "Fire",
+            "Poison",
+            "Earth",
+            "Elemental",
+            "Deathblow",
+            "Cover",
+            "HP Plus"
+        ]
+    }
+]
