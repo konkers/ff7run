@@ -1,12 +1,11 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
-import { MateriaType } from 'materia';
+import { MateriaType } from "@shared";
 
 @Pipe({
-  name: 'materiaTypeName'
+  name: "materiaTypeName"
 })
 export class MateriaTypeNamePipe implements PipeTransform {
-
   transform(value: MateriaType): string {
     switch (value) {
       case MateriaType.Command:
@@ -21,5 +20,4 @@ export class MateriaTypeNamePipe implements PipeTransform {
         return "support";
     }
   }
-
 }

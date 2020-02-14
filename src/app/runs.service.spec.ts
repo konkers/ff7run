@@ -6,7 +6,7 @@ import { AngularFireFunctions } from "@angular/fire/functions";
 import {
   angularFirestoreStub,
   angularFireFunctionsStub
-} from "../testing/firebase";
+} from "../testing/firebase.mock";
 
 import { RunsService } from "./runs.service";
 

@@ -1,12 +1,16 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "module": "commonjs",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "outDir": "lib",
+    "resolveJsonModule": true,
     "sourceMap": true,
-    "strict": true,
-    "target": "es2017"
+    "target": "es2017",
+    "paths": {
+      "@shared": ["../projects/shared/src/public-api.ts"]
+    }
   },
   "compileOnSave": true,
   "include": [

@@ -10,7 +10,7 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import {
   angularFirestoreStub,
   angularFireFunctionsStub
-} from "../../testing/firebase";
+} from "../../testing/firebase.mock";
 
 import { GenerateComponent } from "./generate.component";
 

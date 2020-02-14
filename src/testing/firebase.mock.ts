@@ -16,3 +16,5 @@ export const angularFirestoreStub = {
 };
 
 export const angularFireFunctionsStub = {};
+
+export const angularFireAuthStub = {};
