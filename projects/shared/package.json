@@ -1,0 +1,7 @@
+{
+  "name": "shared",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "firebase": "^7.8.2"
+  }
+}

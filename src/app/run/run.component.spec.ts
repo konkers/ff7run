@@ -12,7 +12,7 @@ import { RunComponent } from "./run.component";
 import {
   angularFirestoreStub,
   angularFireFunctionsStub
-} from "../../testing/firebase";
+} from "../../testing/firebase.mock";
 
 describe("RunComponent", () => {
   let component: RunComponent;
