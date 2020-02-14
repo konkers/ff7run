@@ -1,16 +1,32 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
-import { GenerateComponent } from './generate.component';
+import { from } from "rxjs";
 
-describe('GenerateComponent', () => {
+import { AngularFirestore } from "@angular/fire/firestore";
+import { AngularFireFunctions } from "@angular/fire/functions";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+
+import {
+  angularFirestoreStub,
+  angularFireFunctionsStub
+} from "../../testing/firebase";
+
+import { GenerateComponent } from "./generate.component";
+
+describe("GenerateComponent", () => {
   let component: GenerateComponent;
   let fixture: ComponentFixture<GenerateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GenerateComponent ]
-    })
-    .compileComponents();
+      imports: [RouterTestingModule, MatProgressSpinnerModule],
+      declarations: [GenerateComponent],
+      providers: [
+        { provide: AngularFireFunctions, useValue: angularFireFunctionsStub },
+        { provide: AngularFirestore, useValue: angularFirestoreStub }
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +35,7 @@ describe('GenerateComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
