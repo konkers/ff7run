@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "luckyseven-ba2d5"
+    "default": "luckyseven-ba2d5",
+    "ff7run": "ff7run"
   }
 }
