@@ -5,7 +5,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { Observable } from 'rxjs';
 import { Timestamp } from '@firebase/firestore-types';
 
-import { Materia } from 'materia';
+import { Materia } from '../../shared/model';
 
 export interface AddRunResponse {
   id: String,

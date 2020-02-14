@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { MateriaType } from 'materia';
+import { MateriaType } from '../../shared/model';
 
 @Pipe({
   name: 'materiaTypeName'

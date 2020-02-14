@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
 import { Run, RunsService } from '../runs.service';
-import { Materia } from 'materia';
+import { Materia } from '../../../shared/model';
 
 @Component({
   selector: 'app-run',
