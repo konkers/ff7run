@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "luckyseven": {
+    "ff7run": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/luckyseven",
+            "outputPath": "dist/ff7run",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "luckyseven:build"
+            "browserTarget": "ff7run:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "luckyseven:build:production"
+              "browserTarget": "ff7run:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "luckyseven:build"
+            "browserTarget": "ff7run:build"
           }
         },
         "test": {
@@ -117,11 +117,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "luckyseven:serve"
+            "devServerTarget": "ff7run:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "luckyseven:serve:production"
+              "devServerTarget": "ff7run:serve:production"
             }
           }
         }
@@ -163,5 +163,5 @@
       }
     }
   },
-  "defaultProject": "luckyseven"
+  "defaultProject": "ff7run"
 }

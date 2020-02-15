@@ -11,7 +11,7 @@
     "source": "functions"
   },
   "hosting": {
-    "public": "dist/luckyseven",
+    "public": "dist/ff7run",
     "ignore": [
       "firebase.json",
       "**/.*",
