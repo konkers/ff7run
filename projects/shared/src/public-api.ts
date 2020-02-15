@@ -2,6 +2,6 @@
  * Public API Surface of shared
  */
 
-export * from "./lib/model";
-export * from "./lib/data";
-export * from "./lib/job-run";
+export * from './lib/model';
+export * from './lib/data';
+export * from './lib/job-run';

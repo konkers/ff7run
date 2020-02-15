@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "fmt:check": "prettier --check src/**/*.ts projects/**/*.ts functions/**/*.ts",
+    "fmt:fix": "prettier --write src/**/*.ts projects/**/*.ts functions/**/*.ts"
   },
   "private": true,
   "dependencies": {
@@ -50,6 +52,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.5.2",
     "ng-packagr": "^5.4.0",
+    "prettier": "1.19.1",
     "protractor": "^5.4.3",
     "ts-node": "~7.0.0",
     "tsickle": "^0.37.0",

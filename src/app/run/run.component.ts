@@ -9,25 +9,19 @@ import { Run, RunsService } from '../runs.service';
 @Component({
   selector: 'app-run',
   templateUrl: './run.component.html',
-  styleUrls: ['./run.component.scss']
+  styleUrls: ['./run.component.scss'],
 })
 export class RunComponent implements OnInit {
   displayedColumns: string[] = ['name', 'type'];
   run$: Observable<Run>;
   run: Run;
 
-
-  constructor(
-    private route: ActivatedRoute,
-    private service: RunsService,
-  ) { }
+  constructor(private route: ActivatedRoute, private service: RunsService) {}
 
   ngOnInit() {
     this.run$ = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) =>
-        this.service.getRun(params.get('id')))
+      switchMap((params: ParamMap) => this.service.getRun(params.get('id')))
     );
-    this.run$.subscribe(r => this.run = r);
+    this.run$.subscribe(r => (this.run = r));
   }
-
 }

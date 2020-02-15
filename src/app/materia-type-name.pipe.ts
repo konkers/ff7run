@@ -1,23 +1,23 @@
-import { Pipe, PipeTransform } from "@angular/core";
+import { Pipe, PipeTransform } from '@angular/core';
 
-import { MateriaType } from "@shared";
+import { MateriaType } from '@shared';
 
 @Pipe({
-  name: "materiaTypeName"
+  name: 'materiaTypeName',
 })
 export class MateriaTypeNamePipe implements PipeTransform {
   transform(value: MateriaType): string {
     switch (value) {
       case MateriaType.Command:
-        return "command";
+        return 'command';
       case MateriaType.Independent:
-        return "independent";
+        return 'independent';
       case MateriaType.Magic:
-        return "magic";
+        return 'magic';
       case MateriaType.Summon:
-        return "summon";
+        return 'summon';
       case MateriaType.Support:
-        return "support";
+        return 'support';
     }
   }
 }
