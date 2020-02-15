@@ -1,11 +1,11 @@
-import { Timestamp } from "@firebase/firestore-types";
+import { Timestamp } from '@firebase/firestore-types';
 
 export enum MateriaType {
-  Command = "command",
-  Independent = "independent",
-  Magic = "magic",
-  Summon = "summon",
-  Support = "support"
+  Command = 'command',
+  Independent = 'independent',
+  Magic = 'magic',
+  Summon = 'summon',
+  Support = 'support',
 }
 
 export interface Materia {
@@ -20,8 +20,8 @@ export interface Job {
 }
 
 export enum RunType {
-  Job = "job",
-  Unknown = "unknown"
+  Job = 'job',
+  Unknown = 'unknown',
 }
 
 export interface JobInfo {

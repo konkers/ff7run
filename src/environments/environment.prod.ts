@@ -6,6 +6,6 @@ export const environment = {
     databaseURL: '<your-database-URL>',
     projectId: 'luckyseven-ba2d5',
     storageBucket: '<your-storage-bucket>',
-    messagingSenderId: '<your-messaging-sender-id>'
+    messagingSenderId: '<your-messaging-sender-id>',
   },
 };

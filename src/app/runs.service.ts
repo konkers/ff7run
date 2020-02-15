@@ -1,14 +1,14 @@
-import { Injectable } from "@angular/core";
-import { AngularFireFunctions } from "@angular/fire/functions";
+import { Injectable } from '@angular/core';
+import { AngularFireFunctions } from '@angular/fire/functions';
 import {
   AngularFirestore,
-  AngularFirestoreDocument
-} from "@angular/fire/firestore";
+  AngularFirestoreDocument,
+} from '@angular/fire/firestore';
 
-import { Observable } from "rxjs";
-import { Timestamp } from "@firebase/firestore-types";
+import { Observable } from 'rxjs';
+import { Timestamp } from '@firebase/firestore-types';
 
-import { Materia, new_job_run } from "@shared";
+import { Materia, new_job_run } from '@shared';
 
 export interface AddRunResponse {
   id: String;
@@ -20,7 +20,7 @@ export interface Run {
 }
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root',
 })
 export class RunsService {
   constructor(
@@ -29,7 +29,7 @@ export class RunsService {
   ) {}
 
   public newRun(): Observable<AddRunResponse> {
-    const callable = this.fns.httpsCallable("newRun");
+    const callable = this.fns.httpsCallable('newRun');
     return callable({});
   }
 
