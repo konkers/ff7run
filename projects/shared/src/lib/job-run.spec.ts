@@ -2,14 +2,14 @@ import { Run, RunConfig, RunType, MateriaType } from './model';
 import { CHARACTER_LIST, JOB_LIST, MATERIA_LIST } from './data';
 import { new_job_run } from './job-run';
 
-const materia_map = MATERIA_LIST.reduce((map, obj) => {
+const materiaMap = MATERIA_LIST.reduce((map, obj) => {
   map[obj.name] = obj;
   return map;
 }, {});
 
 describe('MATERIA_LIST', () => {
   it('Steal is command type', () => {
-    expect(materia_map['Steal'].ty).toBe(MateriaType.Command);
+    expect(materiaMap['Steal'.toString()].ty).toBe(MateriaType.Command);
   });
 });
 
@@ -17,7 +17,7 @@ describe('JOB_LIST', () => {
   it(`Jobs' materia exist`, () => {
     for (const job of JOB_LIST) {
       for (const materia of job.materia) {
-        expect(materia in materia_map).toBeTruthy(
+        expect(materia in materiaMap).toBeTruthy(
           `${job.name}'s ${materia} materia is unknown.`
         );
       }
@@ -26,7 +26,7 @@ describe('JOB_LIST', () => {
 });
 
 describe('new_job_run', () => {
-  let run = new_job_run({ ty: RunType.Job });
+  const run = new_job_run({ ty: RunType.Job });
   it('is of Job type', () => {
     expect(run.full.ty).toBe(RunType.Job);
     expect(run.current.ty).toBe(RunType.Job);

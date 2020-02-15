@@ -11,13 +11,13 @@ import { auth } from 'firebase/app';
 export class AppComponent {
   title = 'ff7run';
 
-  constructor(public auth: AngularFireAuth) {}
+  constructor(public afa: AngularFireAuth) {}
 
   login() {
-    this.auth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.afa.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
 
   logout() {
-    this.auth.auth.signOut();
+    this.afa.auth.signOut();
   }
 }
