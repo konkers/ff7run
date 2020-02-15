@@ -11,7 +11,7 @@ import { Timestamp } from '@firebase/firestore-types';
 import { Materia, new_job_run } from '@shared';
 
 export interface AddRunResponse {
-  id: String;
+  id: string;
 }
 
 export interface Run {

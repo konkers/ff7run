@@ -12,7 +12,7 @@ function get_random_int(max: number): number {
 }
 
 export function new_job_run(config: RunConfig): StoredRun {
-  let full_run: Run = {
+  const fullRun: Run = {
     ty: RunType.Job,
     job_data: {
       jobs: {},
@@ -20,7 +20,7 @@ export function new_job_run(config: RunConfig): StoredRun {
   };
 
   for (const char of CHARACTER_LIST) {
-    full_run.job_data.jobs[char] = {
+    fullRun.job_data.jobs[char] = {
       name: JOB_LIST[get_random_int(JOB_LIST.length)].name,
       has_lure: false,
       has_underwater: false,
@@ -28,21 +28,21 @@ export function new_job_run(config: RunConfig): StoredRun {
   }
 
   // Start the current run with cloud unlocked.
-  const current_run: Run = {
+  const currentRun: Run = {
     ty: RunType.Job,
     job_data: {
       jobs: {
-        Cloud: full_run.job_data.jobs['Cloud'],
+        Cloud: fullRun.job_data.jobs['Cloud'.toString()],
       },
     },
   };
 
   return {
-    config: config,
+    config,
     log: [
       { when: firebase.firestore.Timestamp.now(), message: 'Run started.' },
     ],
-    full: full_run,
-    current: current_run,
+    full: fullRun,
+    current: currentRun,
   };
 }
