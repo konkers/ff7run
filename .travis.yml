@@ -13,6 +13,7 @@ cache:
 
 before_script:
   - npm install -g @angular/cli
+  - npm install -g eslint tslint
 
 install:
   - npm install
