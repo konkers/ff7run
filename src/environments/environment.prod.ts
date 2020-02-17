@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: 'AIzaSyCMSCC02dy4jO_gKhFfRD4FG4lyl-rNh78',
-    authDomain: '<your-project-authdomain>',
-    databaseURL: '<your-database-URL>',
-    projectId: 'luckyseven-ba2d5',
-    storageBucket: '<your-storage-bucket>',
-    messagingSenderId: '<your-messaging-sender-id>',
+    apiKey: 'AIzaSyCXV9Lc0L4UQ9ODDafSQ5GUyGM4mUyk2fs',
+    authDomain: 'ff7.run',
+    databaseURL: 'https://ff7run-6dc8a.firebaseio.com',
+    projectId: 'ff7run-6dc8a',
+    storageBucket: 'ff7run-6dc8a.appspot.com',
+    messagingSenderId: '133659434190',
   },
 };
