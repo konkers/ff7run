@@ -34,7 +34,7 @@ export const newRun = functions.https.onCall(
       );
     }
 
-    if (config.ty != RunType.Job) {
+    if (config.ty !== RunType.Job) {
       throw new functions.https.HttpsError(
         'invalid-argument',
         `Invalid run type ${config.ty}`
@@ -83,7 +83,7 @@ export const unlockJob = functions.https.onCall(
     }
 
     const db = admin.firestore();
-    let state = (
+    const state = (
       await states(db, context)
         .doc(cmd.run_id)
         .get()
@@ -93,7 +93,7 @@ export const unlockJob = functions.https.onCall(
       return;
     }
 
-    let plan = (
+    const plan = (
       await plans(db, context)
         .doc(cmd.run_id)
         .get()

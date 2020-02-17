@@ -34,6 +34,18 @@ import { MateriaComponent } from './materia/materia.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { RunListComponent } from './run-list/run-list.component';
 
+const debugProviders = environment.production
+  ? []
+  : [
+      {
+        provide: FirestoreSettingsToken,
+        useValue: {
+          host: 'localhost:8080',
+          ssl: false,
+        },
+      },
+      { provide: FUNCTIONS_ORIGIN, useValue: 'http://localhost:5001' },
+    ];
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,18 +75,7 @@ import { RunListComponent } from './run-list/run-list.component';
     MatTableModule,
     MatToolbarModule,
   ],
-  providers: [
-    {
-      provide: FirestoreSettingsToken,
-      useValue: environment.production
-        ? undefined
-        : {
-            host: 'localhost:8080',
-            ssl: false,
-          },
-    },
-    { provide: FUNCTIONS_ORIGIN, useValue: 'http://localhost:5001' },
-  ],
+  providers: debugProviders,
   bootstrap: [AppComponent],
 })
 export class AppModule {}
