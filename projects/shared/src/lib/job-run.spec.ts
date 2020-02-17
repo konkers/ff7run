@@ -1,4 +1,4 @@
-import { RunType, MateriaType } from './model';
+import { RunType, RunStatus, MateriaType } from './model';
 import { character_list, job_list, materia_list } from './data';
 import { new_job_run } from './job-run';
 
@@ -30,6 +30,10 @@ describe('new_job_run', () => {
 
   it('is of Job type', () => {
     expect(state.config.ty).toBe(RunType.Job);
+  });
+
+  it('is active', () => {
+    expect(state.status).toBe(RunStatus.Active);
   });
 
   it('state only has Cloud assigned', () => {

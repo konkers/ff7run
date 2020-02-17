@@ -30,6 +30,12 @@ export enum RunType {
   Unknown = 'unknown',
 }
 
+export enum RunStatus {
+  Active = 'active',
+  Finished = 'finished',
+  Abandoned = 'abandoned',
+}
+
 export interface JobInfo {
   name: string;
   has_lure: boolean;
@@ -65,6 +71,7 @@ export interface LogEntry {
 // `plan` is just an instance of RunData.
 export interface RunState {
   config: RunConfig;
+  status: RunStatus;
   log: LogEntry[];
   data: RunData;
 }
