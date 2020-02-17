@@ -1,8 +1,8 @@
-import { Run, RunConfig, RunType, MateriaType } from './model';
-import { CHARACTER_LIST, JOB_LIST, MATERIA_LIST } from './data';
+import { RunType, MateriaType } from './model';
+import { character_list, job_list, materia_list } from './data';
 import { new_job_run } from './job-run';
 
-const materiaMap = MATERIA_LIST.reduce((map, obj) => {
+const materiaMap = materia_list().reduce((map, obj) => {
   map[obj.name] = obj;
   return map;
 }, {});
@@ -15,7 +15,7 @@ describe('MATERIA_LIST', () => {
 
 describe('JOB_LIST', () => {
   it(`Jobs' materia exist`, () => {
-    for (const job of JOB_LIST) {
+    for (const job of job_list()) {
       for (const materia of job.materia) {
         expect(materia in materiaMap).toBeTruthy(
           `${job.name}'s ${materia} materia is unknown.`
@@ -26,25 +26,25 @@ describe('JOB_LIST', () => {
 });
 
 describe('new_job_run', () => {
-  const run = new_job_run({ ty: RunType.Job });
+  const [plan, state] = new_job_run({ ty: RunType.Job });
+
   it('is of Job type', () => {
-    expect(run.full.ty).toBe(RunType.Job);
-    expect(run.current.ty).toBe(RunType.Job);
+    expect(state.config.ty).toBe(RunType.Job);
   });
 
-  it('current only has Cloud assigned', () => {
-    expect(run.current.job_data).toBeDefined();
-    expect(Object.keys(run.current.job_data.jobs).length).toBe(1);
-    expect('Cloud' in run.current.job_data.jobs).toBeTruthy();
+  it('state only has Cloud assigned', () => {
+    expect(state.data.job_data).toBeDefined();
+    expect(Object.keys(state.data.job_data.jobs).length).toBe(1);
+    expect('Cloud' in state.data.job_data.jobs).toBeTruthy();
   });
 
-  it('full only has everyone assigned', () => {
-    expect(run.full.job_data).toBeDefined();
-    expect(Object.keys(run.full.job_data.jobs).length).toBe(
-      CHARACTER_LIST.length
+  it('plan only has everyone assigned', () => {
+    expect(plan.job_data).toBeDefined();
+    expect(Object.keys(plan.job_data.jobs).length).toBe(
+      character_list().length
     );
-    for (const char of CHARACTER_LIST) {
-      expect(char in run.full.job_data.jobs).toBeTruthy();
+    for (const char of character_list()) {
+      expect(char in plan.job_data.jobs).toBeTruthy();
     }
   });
 });

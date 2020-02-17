@@ -17,8 +17,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatJumbotronModule } from '@angular-material-extensions/jumbotron';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,14 +29,18 @@ import { GenerateComponent } from './generate/generate.component';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RunComponent } from './run/run.component';
-import { MateriaTypeNamePipe } from './materia-type-name.pipe';
+import { CharacterComponent } from './character/character.component';
+import { MateriaComponent } from './materia/materia.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GenerateComponent,
     RunComponent,
-    MateriaTypeNamePipe,
+    CharacterComponent,
+    MateriaComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,8 +56,10 @@ import { MateriaTypeNamePipe } from './materia-type-name.pipe';
     MatDividerModule,
     MatIconModule,
     MatJumbotronModule,
+    MatMenuModule,
     MatProgressSpinnerModule,
     MatTableModule,
+    MatToolbarModule,
   ],
   providers: [
     {

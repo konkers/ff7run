@@ -1,13 +1,21 @@
 <header class="docs-header-background">
     <div class="docs-header-section">
         <div class="docs-header-headline">
-            <h1 class="mat-h1">Lucky Seven</h1>
-            <h2>A Final Fantasy VII Challenge Run</h2>
+            <h1 class="mat-h1">FF7 Run</h1>
+            <h2>aka JDP's Job Thingy</h2>
         </div>
         <div class="docs-header-start">
-            <button mat-raised-button *ngIf="!requesting" (click)="onNewRun()">New Run</button>
 
-            <mat-progress-spinner *ngIf="requesting" mode="indeterminate"></mat-progress-spinner>
+            <span *ngIf="afa.user | async as user; else showLogin">
+                <button mat-raised-button *ngIf="!requesting" (click)="onNewRun()">New Run</button>
+
+                <mat-progress-spinner *ngIf="requesting" mode="indeterminate"></mat-progress-spinner>
+            </span>
+            <ng-template #showLogin>
+                <button mat-raised-button (click)="login()">
+                    login
+                </button>
+</ng-template>
         </div>
     </div>
 </header>
