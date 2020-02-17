@@ -31,7 +31,6 @@ export class RunsService {
     return this.afa.user.pipe(
       mergeMap(user => {
         const path = `runs/state/${user.uid}/${id}`;
-
         return this.afs.doc<RunState>(path).valueChanges();
       })
     );
