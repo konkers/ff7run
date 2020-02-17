@@ -1,11 +1,47 @@
 [
-    "Cloud",
-    "Tifa",
-    "Barret",
-    "Aerith",
-    "Red XIII",
-    "Yuffie",
-    "Cid",
-    "Vincent",
-    "Cait Sith"
+    {
+        "name": "Cloud",
+        "can_lure": true,
+        "can_underwater": true
+    },
+    {
+        "name": "Barret",
+        "can_lure": true,
+        "can_underwater": true
+    },
+    {
+        "name": "Tifa",
+        "can_lure": true,
+        "can_underwater": true
+    },
+    {
+        "name": "Aerith",
+        "can_lure": true,
+        "can_underwater": true
+    },
+    {
+        "name": "Red XIII",
+        "can_lure": true,
+        "can_underwater": true
+    },
+    {
+        "name": "Yuffie",
+        "can_lure": false,
+        "can_underwater": true
+    },
+    {
+        "name": "Cait Sith",
+        "can_lure": false,
+        "can_underwater": true
+    },
+    {
+        "name": "Cid",
+        "can_lure": false,
+        "can_underwater": true
+    },
+    {
+        "name": "Vincent",
+        "can_lure": false,
+        "can_underwater": true
+    }
 ]

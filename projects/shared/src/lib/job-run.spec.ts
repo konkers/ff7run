@@ -44,7 +44,7 @@ describe('new_job_run', () => {
       character_list().length
     );
     for (const char of character_list()) {
-      expect(char in plan.job_data.jobs).toBeTruthy();
+      expect(char.name in plan.job_data.jobs).toBeTruthy();
     }
   });
 });

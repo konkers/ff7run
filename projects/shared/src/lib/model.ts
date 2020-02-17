@@ -13,6 +13,12 @@ export interface Materia {
   ty: MateriaType;
 }
 
+export interface CharacterInfo {
+  name: string;
+  can_lure: boolean;
+  can_underwater: boolean;
+}
+
 export interface Job {
   name: string;
   desc: string;

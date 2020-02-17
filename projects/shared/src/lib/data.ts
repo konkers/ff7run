@@ -1,4 +1,4 @@
-import { Job, Materia } from './model';
+import { CharacterInfo, Job, Materia } from './model';
 
 import * as materia from './materia.json';
 import * as characters from './characters.json';
@@ -14,7 +14,7 @@ export function materia_list(): Materia[] {
   }
 }
 
-export function character_list(): string[] {
+export function character_list(): CharacterInfo[] {
   if (defaultName in characters) {
     return characters[defaultName];
   } else {

@@ -10,6 +10,8 @@ import { JobService } from '../job.service';
 export class CharacterComponent implements OnInit {
   @Input() name: string;
   @Input() job: string;
+  @Input() hasLure: boolean;
+  @Input() hasUnderwater: boolean;
   @Output() unlock = new EventEmitter();
 
   constructor(private jobs: JobService) {}

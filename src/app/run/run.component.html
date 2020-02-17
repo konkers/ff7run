@@ -1,5 +1,9 @@
 <div class="container" *ngIf="run" class="char-list">
     <div *ngFor="let char of characters" class="char">
-        <app-character [name]="char" [job]="getJob(char)" (unlock)="unlockCharacter(char)"></app-character>
+        <app-character [name]="char.name" [job]="getJob(char.name)" 
+        [hasLure]="hasLure(char.name)"
+        [hasUnderwater]="hasUnderwater(char.name)"
+        (unlock)="unlockCharacter(char.name)">
+        </app-character>
     </div>
 </div>

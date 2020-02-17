@@ -12,8 +12,8 @@ import {
 } from '../../projects/shared/src/public-api';
 
 admin.initializeApp(functions.config().firebase);
-const charMap = character_list().reduce((map, name) => {
-  map[name] = true;
+const charMap = character_list().reduce((map, obj) => {
+  map[obj.name] = obj;
   return map;
 }, {});
 
