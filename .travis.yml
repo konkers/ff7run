@@ -9,19 +9,21 @@ addons:
 cache:
   directories:
     - './node_modules'
+    - './functions/node_modules'
 
 before_script:
   - npm install -g @angular/cli
-  - npm install -g eslint tslint
 
 install:
   - npm install
+  - (cd functions ; npm install)
 
 script:
   - ng test --watch=false --no-progress --browsers=ChromeHeadless
   - ng lint
   - npm run fmt:check
   - ng build --prod
+  - (cd functions ; npm run lint)
 
 deploy:
   provider: firebase
