@@ -91,6 +91,10 @@ export const unlockJob = functions.https.onCall(
     ).data() as RunData;
 
     state.data.job_data.jobs[cmd.name] = plan.job_data.jobs[cmd.name];
+    state.log.push({
+      when: admin.firestore.Timestamp.now(),
+      message: `Unlocked ${cmd.name}.`,
+    });
 
     await states(db, context)
       .doc(cmd.run_id)
