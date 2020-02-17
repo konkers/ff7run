@@ -6,8 +6,8 @@
         <mat-card-title>{{name}}</mat-card-title>
         <mat-card-subtitle *ngIf="job">
             {{job}}
-            <span *ngIf="hasLure">Rancher</span>
-            <span *ngIf="hasUnderwater">Swimmer</span>
+            <span *ngIf="hasLure">, Rancher</span>
+            <span *ngIf="hasUnderwater">, Swimmer</span>
         </mat-card-subtitle>
         <mat-card-subtitle *ngIf="!job">??????</mat-card-subtitle>
     </mat-card-header>
