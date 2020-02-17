@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>ff7.run</span>
+        <span class="spacer"></span>
+        <span *ngIf="afa.user | async as user; else showLogin">
+            <button mat-mini-fab class="profile" [style.backgroundImage]="'url(' + user.photoURL + ')'" mat-button
+                [matMenuTriggerFor]="menu">
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+        </span>
+        <ng-template #showLogin>
+            <button mat-raised-button (click)="login()">
+                login
+            </button>
+        </ng-template>
+
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -15,6 +15,10 @@ export const angularFirestoreStub = {
   doc: jasmine.createSpy('doc').and.returnValue(docStub),
 };
 
-export const angularFireFunctionsStub = {};
+const userStub = {
+  valueChanges: jasmine.createSpy('valueChanges').and.returnValue(data),
+};
 
 export const angularFireAuthStub = {};
+
+export const angularFireFunctionsStub = {};

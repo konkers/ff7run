@@ -3,11 +3,13 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { from } from 'rxjs';
 
+import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireFunctions } from '@angular/fire/functions';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import {
+  angularFireAuthStub,
   angularFirestoreStub,
   angularFireFunctionsStub,
 } from '../../testing/firebase.mock';
@@ -23,6 +25,7 @@ describe('GenerateComponent', () => {
       imports: [RouterTestingModule, MatProgressSpinnerModule],
       declarations: [GenerateComponent],
       providers: [
+        { provide: AngularFireAuth, useValue: angularFireAuthStub },
         { provide: AngularFireFunctions, useValue: angularFireFunctionsStub },
         { provide: AngularFirestore, useValue: angularFirestoreStub },
       ],

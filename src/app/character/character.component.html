@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{name}}</mat-card-title>
+        <mat-card-subtitle *ngIf="job">{{job}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="!job">??????</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="materia-list" *ngIf="job">
+            <app-materia *ngFor="let materia of getMateria(job)" [name]="materia"></app-materia>
+        </div>
+        <div class="materia-list" *ngIf="!job">
+            <button mat-raised-button color="primary" (click)="onUnlock()">
+                unlock
+            </button>
+        </div>
+    </mat-card-content>
+</mat-card>
