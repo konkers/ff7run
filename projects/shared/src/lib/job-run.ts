@@ -2,7 +2,13 @@
 import firebase from '@firebase/app';
 import '@firebase/firestore';
 
-import { CharacterInfo, RunConfig, RunData, RunState } from './model';
+import {
+  CharacterInfo,
+  RunConfig,
+  RunData,
+  RunState,
+  RunStatus,
+} from './model';
 import { character_list, job_list } from './data';
 
 // TODO: Investigate using window.crypto.getRandomValues() for better
@@ -51,6 +57,7 @@ export function new_job_run(config: RunConfig): [RunData, RunState] {
     plan,
     {
       config,
+      status: RunStatus.Active,
       log: [
         { when: firebase.firestore.Timestamp.now(), message: 'Run started.' },
       ],
