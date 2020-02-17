@@ -12,7 +12,9 @@
 
   .app-background {
     background: mat-color($background, background);
+    color: mat-color($primary, default-contrast);
   }
+
   @include generate-theme($theme);
 }
 
