@@ -7,15 +7,20 @@
         <div class="docs-header-start">
 
             <span *ngIf="afa.user | async as user; else showLogin">
-                <button mat-raised-button *ngIf="!requesting" (click)="onNewRun()">New Run</button>
+                <span *ngIf="!requesting">
+                    <button mat-raised-button (click)="onNewRun()">New Run</button>
+                    <span class="spacer"></span>
+                    <button mat-raised-button (click)="gotoRuns()">My Runs</button>
+                </span>
+                <span class="center" *ngIf="requesting">
+                    <mat-progress-spinner color="accent" mode="indeterminate">
+                    </mat-progress-spinner>
+                </span>
 
-                <mat-progress-spinner *ngIf="requesting" mode="indeterminate"></mat-progress-spinner>
             </span>
             <ng-template #showLogin>
-                <button mat-raised-button (click)="login()">
-                    login
-                </button>
-</ng-template>
+                <button mat-raised-button (click)="login()">login</button>
+            </ng-template>
         </div>
     </div>
 </header>
