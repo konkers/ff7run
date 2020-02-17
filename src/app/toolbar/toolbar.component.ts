@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
@@ -9,7 +10,7 @@ import { auth } from 'firebase/app';
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent implements OnInit {
-  constructor(public afa: AngularFireAuth) {}
+  constructor(private router: Router, public afa: AngularFireAuth) {}
 
   ngOnInit() {}
 
@@ -19,5 +20,9 @@ export class ToolbarComponent implements OnInit {
 
   logout() {
     this.afa.auth.signOut();
+  }
+
+  gotoRuns() {
+    this.router.navigate([`/runs`]);
   }
 }

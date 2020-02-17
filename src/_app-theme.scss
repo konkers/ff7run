@@ -1,6 +1,7 @@
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
 @import './app/generate/generate-theme';
+@import './app/toolbar/toolbar-theme';
 
 @mixin ff7run-app-theme($theme) {
   $primary: map-get($theme, primary);
@@ -16,6 +17,7 @@
   }
 
   @include generate-theme($theme);
+  @include toolbar-theme($theme);
 }
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss

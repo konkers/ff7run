@@ -34,4 +34,8 @@ export class GenerateComponent implements OnInit {
   login() {
     this.afa.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
+
+  gotoRuns() {
+    this.router.navigate([`/runs`]);
+  }
 }
