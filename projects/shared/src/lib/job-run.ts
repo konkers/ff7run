@@ -56,6 +56,7 @@ export function new_job_run(config: RunConfig): [RunData, RunState] {
   return [
     plan,
     {
+      id: '',
       config,
       status: RunStatus.Active,
       timestamp: firebase.firestore.Timestamp.now(),

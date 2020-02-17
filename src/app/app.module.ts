@@ -32,6 +32,7 @@ import { RunComponent } from './run/run.component';
 import { CharacterComponent } from './character/character.component';
 import { MateriaComponent } from './materia/materia.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { RunListComponent } from './run-list/run-list.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     CharacterComponent,
     MateriaComponent,
     ToolbarComponent,
+    RunListComponent,
   ],
   imports: [
     BrowserModule,

@@ -70,6 +70,7 @@ export interface LogEntry {
 //
 // `plan` is just an instance of RunData.
 export interface RunState {
+  id: string;
   config: RunConfig;
   status: RunStatus;
   timestamp: Timestamp;
