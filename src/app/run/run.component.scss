@@ -1,11 +1,7 @@
-table {
-    width: 100%;
+.char-list {
+    display: flex;
+    flex-wrap: wrap;
 }
-
-.materia-list {
-    width: 480px;
-}
-
-.container {
-    margin: 50px;
+.char {
+    margin: 16px;
 }

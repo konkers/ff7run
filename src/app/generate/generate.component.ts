@@ -3,7 +3,10 @@ import { Router } from '@angular/router';
 
 import { Observable, from } from 'rxjs';
 
-import { AddRunResponse, RunsService } from '../runs.service';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase/app';
+
+import { RunsService } from '../runs.service';
 
 @Component({
   selector: 'app-generate',
@@ -13,7 +16,11 @@ import { AddRunResponse, RunsService } from '../runs.service';
 export class GenerateComponent implements OnInit {
   requesting = false;
 
-  constructor(private router: Router, private runsSvc: RunsService) {}
+  constructor(
+    public afa: AngularFireAuth,
+    private router: Router,
+    private runsSvc: RunsService
+  ) {}
 
   ngOnInit() {}
 
@@ -21,7 +28,11 @@ export class GenerateComponent implements OnInit {
     this.requesting = true;
     this.runsSvc.newRun().subscribe(resp => {
       console.log(resp);
-      // this.router.navigate([`/run/${resp.id}`]);
+      this.router.navigate([`/run/${resp}`]);
     });
+  }
+
+  login() {
+    this.afa.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
 }

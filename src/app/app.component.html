@@ -1,9 +1,4 @@
-<div *ngIf="afa.user | async as user; else showLogin">
-  <h1>Hello {{ user.displayName }}!</h1>
-  <button (click)="logout()">Logout</button>
+<app-toolbar class="mat-elevation-z6"></app-toolbar>
+<div class="content">
+  <router-outlet></router-outlet>
 </div>
-<ng-template #showLogin>
-  <p>Please login.</p>
-  <button (click)="login()">Login with Google</button>
-</ng-template>
-<router-outlet></router-outlet>

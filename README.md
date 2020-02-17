@@ -15,11 +15,33 @@ The code in this repos is divided into 3 sections:
 
 ## Development
 
-### Development server
+### Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To develop, you'll need to install [Node JS](https://nodejs.org/). 
 
-**TODO(konkers)**: Document how to set up firebase emulators and test against those.
+Once installed, install the Angular and Firebase CLI utilities:
+
+```sh
+npm install -g @angular/cli
+npm install -g firebase-tools
+```
+
+### Frontend development
+
+First build the backend and start the firebase emulators:
+
+```sh
+(cd functions; npm run build) && firebase emulators:start
+```
+
+Once that's started, start the angular dev server:
+
+```sh
+ng serve
+```
+
+The app will now be running at `http://localhost:4200/`. The app will automatically
+ reload if you change any of the source files.
 
 ### Running unit tests
 

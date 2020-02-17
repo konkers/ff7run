@@ -37,8 +37,7 @@ export interface JobRunData {
   jobs: JobRunJobList;
 }
 
-export interface Run {
-  ty: RunType;
+export interface RunData {
   job_data?: JobRunData;
 }
 
@@ -51,18 +50,20 @@ export interface LogEntry {
   message: string;
 }
 
-// Two copies of the run are maintained.  `full` is the complete, generated
-// run while `current` is the current state of the run visible to the runner.
-// As the runner unlocks more of the run (e.x. by acquiring a character) data
-// from `full` to `current`.  This makes run generation easier while keeping
-// the fun mechanic of unlocking as you go.
+// Data for a run is kept in a private `plan` which is only accessible to the
+// backend and a public `state` which is public readable.  The `plan` includes
+// the full details of the run while the `state` only contains data unlocked
+// by the runner.  This makes run generation easier while keeping the fun
+// mechanic of unlocking as you go.
 //
-// `config` should be accessible to the user.
-//
-// Database rules are needed to enforce visibility here.
-export interface StoredRun {
+// `plan` is just an instance of RunData.
+export interface RunState {
   config: RunConfig;
   log: LogEntry[];
-  full: Run;
-  current: Run;
+  data: RunData;
+}
+
+export interface UnlockJobCommand {
+  run_id: string;
+  name: string;
 }

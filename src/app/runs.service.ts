@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireFunctions } from '@angular/fire/functions';
 import {
   AngularFirestore,
@@ -6,35 +7,42 @@ import {
 } from '@angular/fire/firestore';
 
 import { Observable } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
 import { Timestamp } from '@firebase/firestore-types';
 
-import { Materia, new_job_run } from '@shared';
-
-export interface AddRunResponse {
-  id: string;
-}
-
-export interface Run {
-  date: Timestamp;
-  materia: Materia[];
-}
+import { RunState } from '@shared';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RunsService {
+
   constructor(
+    private afa: AngularFireAuth,
     private afs: AngularFirestore,
     private fns: AngularFireFunctions
-  ) {}
-
-  public newRun(): Observable<AddRunResponse> {
-    const callable = this.fns.httpsCallable('newRun');
-    return callable({});
+  ) {
   }
 
-  public getRun(id: string): Observable<Run> {
-    console.log(`runs/${id}`);
-    return this.afs.doc<Run>(`runs/${id}`).valueChanges();
+  public newRun(): Observable<string> {
+    const callable = this.fns.httpsCallable('newRun');
+    return callable({ ty: 'job' });
+  }
+
+  public getRun(id: string): Observable<RunState> {
+    return this.afa.user.pipe(
+      mergeMap(user => {
+        const path = `runs/state/${user.uid}/${id}`;
+
+        console.log(path);
+        //let uid = this.afa
+        return this.afs.doc<RunState>(path).valueChanges();
+      })
+    );
+  }
+
+  public unlockJob(run_id: string, name: string) {
+    const callable = this.fns.httpsCallable('unlockJob');
+    callable({run_id, name});
   }
 }

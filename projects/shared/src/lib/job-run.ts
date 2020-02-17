@@ -2,8 +2,8 @@
 import firebase from '@firebase/app';
 import '@firebase/firestore';
 
-import { RunConfig, Run, RunType, StoredRun } from './model';
-import { CHARACTER_LIST, JOB_LIST } from './data';
+import { RunConfig, RunData, RunState } from './model';
+import { character_list, job_list } from './data';
 
 // TODO: Investigate using window.crypto.getRandomValues() for better
 // RNG.  Does this work with cloud functions?
@@ -11,38 +11,40 @@ function get_random_int(max: number): number {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-export function new_job_run(config: RunConfig): StoredRun {
-  const fullRun: Run = {
-    ty: RunType.Job,
+export function new_job_run(config: RunConfig): [RunData, RunState] {
+  const plan: RunData = {
     job_data: {
       jobs: {},
     },
   };
 
-  for (const char of CHARACTER_LIST) {
-    fullRun.job_data.jobs[char] = {
-      name: JOB_LIST[get_random_int(JOB_LIST.length)].name,
+  const jobList = job_list();
+
+  for (const char of character_list()) {
+    plan.job_data.jobs[char] = {
+      name: jobList[get_random_int(jobList.length)].name,
       has_lure: false,
       has_underwater: false,
     };
   }
 
   // Start the current run with cloud unlocked.
-  const currentRun: Run = {
-    ty: RunType.Job,
+  const data: RunData = {
     job_data: {
       jobs: {
-        Cloud: fullRun.job_data.jobs['Cloud'.toString()],
+        Cloud: plan.job_data.jobs['Cloud'.toString()],
       },
     },
   };
 
-  return {
-    config,
-    log: [
-      { when: firebase.firestore.Timestamp.now(), message: 'Run started.' },
-    ],
-    full: fullRun,
-    current: currentRun,
-  };
+  return [
+    plan,
+    {
+      config,
+      log: [
+        { when: firebase.firestore.Timestamp.now(), message: 'Run started.' },
+      ],
+      data: data,
+    },
+  ];
 }
