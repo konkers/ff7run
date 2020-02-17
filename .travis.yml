@@ -1,7 +1,6 @@
 language: node_js
 node_js:
   - '10'
-
 sudo: false
 
 addons:
@@ -9,7 +8,7 @@ addons:
 
 cache:
   directories:
-    - ./node_modules
+    - './node_modules'
 
 before_script:
   - npm install -g @angular/cli
@@ -22,3 +21,10 @@ script:
   - ng lint
   - npm run fmt:check
   - ng build --prod
+
+deploy:
+  provider: firebase
+  token:
+    secure: XsjcyzzVvY6+2AccmKkWPtHY1/87pDAFiFjNWa3XY6Ixg4nx2vVYofnIaqWe0Fqd4b25yCP8FPsq4NM1IfXc5YsESHnRJiZt4QUbAOFqeMKVzpQ0F/DI+uV6/iZ0KpfOA8uvRltCBxhfRh6a4CWXNirn9YoO7cIo2yG9fCOUGSJ2lyIjWC5Y5Xbj8vyp2GXJfIS4Z9zYTk+7eegQLxOo68FxY0yXhUv4exlD0534HVdrJ0FLrRcnO44EpPUh2cW2ahsFvpmVR0PejBTAZB53xTEX2qR0GBskzVecfk3wBvtvAtldoNuoK2fyFYTsqC3mon2zkvErCuRjXBZs6WiEI1XDoVNuN1qCo1xKv6bi4R18xr3sinUysCH0lmWB+AKyWJgncyzAec1OEqapdtsTFhWU13rhtm9U+jYBBFhNIUofxA3H31UHvu8jhfkEDAc6TaIICwMEq6ENLx9sgTxfQgsv+VR+4bRTFcvEEoSf+0j2tSb4f3LKTD5MZ9QJ/rdqOm8uXopqfWPiAfR3YaqB21voqD53Und+sWc4lax+EsFGpd1r+HO/H2iHxE9n41SX5w12z9dUMLWOp7YE1jYVM8KWpIoYTybUvL09Muh0QOsIgC7eC6cssaNfut+UMrWsDMbGtLDfHpAa72tgYwBiNWxXkLp1QAPpgNqPITZN1WA=
+  on:
+    branch: release
