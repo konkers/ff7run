@@ -58,6 +58,7 @@ export function new_job_run(config: RunConfig): [RunData, RunState] {
     {
       config,
       status: RunStatus.Active,
+      timestamp: firebase.firestore.Timestamp.now(),
       log: [
         { when: firebase.firestore.Timestamp.now(), message: 'Run started.' },
       ],

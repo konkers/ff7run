@@ -72,6 +72,7 @@ export interface LogEntry {
 export interface RunState {
   config: RunConfig;
   status: RunStatus;
+  timestamp: Timestamp;
   log: LogEntry[];
   data: RunData;
 }

@@ -45,7 +45,9 @@ export const newRun = functions.https.onCall(
 
     // Hack to work around Timestamp class mismatch between frontend and backend.
     // We should refactor new_job_run() and friends to take a timestamp.
-    state.log[0].when = admin.firestore.Timestamp.now();
+    const now = admin.firestore.Timestamp.now();
+    state.timestamp = now;
+    state.log[0].when = now;
 
     const db = admin.firestore();
     const ref = await states(db, context).add(state);
@@ -91,8 +93,10 @@ export const unlockJob = functions.https.onCall(
     ).data() as RunData;
 
     state.data.job_data.jobs[cmd.name] = plan.job_data.jobs[cmd.name];
+    const now = admin.firestore.Timestamp.now();
+    state.timestamp = now;
     state.log.push({
-      when: admin.firestore.Timestamp.now(),
+      when: now,
       message: `Unlocked ${cmd.name}.`,
     });
 
