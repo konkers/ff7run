@@ -13,7 +13,7 @@
             "Exit",
             "Shield",
             "Sense",
-            "X-Magic",
+            "W-Magic",
             "MP Plus",
             "Magic Plus",
             "All",
@@ -21,8 +21,8 @@
         ]
     },
     {
-        "name": "Pyromancer",
-        "desc": "A more limited class specializing in fire based abilities, and fire based abilities alone.",
+        "name": "Pyromaniac",
+        "desc": "Discovering an affinity to fire, and heat, at a young age, the Pyromaniac has spent a lifetime specializing in the manipulation of flame. Be it casting simple fire spells, or summoning powerful fire-based monsters this job is ready to dish out damage. A feat that can be boosted even further with certain support Materia. Finally, if it all looks like it's going to hell a last ditch effort summon of the beast Phoenix might be all you need to get back on your feet.",
         "materia": [
             "Fire",
             "Ifrit",
@@ -31,20 +31,28 @@
             "Elemental",
             "Magic Counter",
             "Magic Plus",
-            "MP Plus"
+            "MP Plus",
+            "Final Attack",
+            "MP Turbo",
+            "Quadra Magic",
+            "Mega All"
         ]
     },
     {
-        "name": "Elsamancer",
-        "desc": "A cheap excuse to reference Frozen. I mean, a counter to the Pyromancer that focuses on Ice based magics instead of Fire. Also since logically water can be manipulated there is cause to give this class the Underwater Materia on the argument that they can merely freeze the water around them to avoid drowning.",
+        "name": "Cryotechnic",
+        "desc": "Imagine growing up being absolutely comfortable with the icy chill of cold temperatures. If you can relate to that, you might just be a Cryotechnic. These ice-based mages primarily focus on hitting things hard with icy blasts, along with occasionally relying on the ice goddess Shiva for extra assistance. An affinity for manipulating water has also granted this class the ability to harness curative magic, via manipulations of the waters of life.",
         "materia": [
             "Ice",
             "MP Plus",
             "Magic Plus",
-            "Underwater",
             "Shiva",
             "All",
-            "Elemental"
+            "Elemental",
+            "MP Turbo",
+            "Quadra Magic",
+            "Magic Counter",
+            "Mega All",
+            "Restore"
         ]
     },
     {
@@ -65,16 +73,20 @@
     },
     {
         "name": "Engineer",
-        "desc": "Consider to be a semi-altered play off of the Pyromancer, and Elsamancer classes. The idea is they still use bolt magic based stuff, but also can do stuff like use a defribulator to revive people, as well as manipulating their speed via ...well zapping the crap out of them with varied voltage.",
+        "desc": "The lightning-based counter to Pyro and Cryo, the Engineer is focused on delivering upon the people powerful lightning blasts. The class is also capable of summoning the powerful elder god Ramuh for additional electrical damage. Finally the ability to shock new life into people like a defribulator has allowed the use of Revive Materia. Knowledge of the mechanical side of items has granted them the ability to use items twice in a single round.",
         "materia": [
             "Lightning",
             "Revive",
-            "Time",
             "MP Plus",
             "Magic Plus",
             "Ramuh",
             "All",
-            "Elemental"
+            "Elemental",
+            "Quadra Magic",
+            "MP Turbo",
+            "Magic Counter",
+            "Mega All",
+            "W-Item"
         ]
     },
     {
@@ -101,7 +113,7 @@
             "MP Plus",
             "Magic Plus",
             "All",
-            "X-Magic",
+            "W-Magic",
             "Quadra Magic",
             "Magic Counter",
             "MP Turbo"

@@ -32,7 +32,7 @@
         "ty": "command"
     },
     {
-        "name": "X-Summon",
+        "name": "W-Summon",
         "ty": "command"
     },
     {
@@ -44,11 +44,11 @@
         "ty": "command"
     },
     {
-        "name": "X-Magic",
+        "name": "W-Magic",
         "ty": "command"
     },
     {
-        "name": "X-Item",
+        "name": "W-Item",
         "ty": "command"
     },
     {
