@@ -1,14 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireFunctions } from '@angular/fire/functions';
-import {
-  AngularFirestore,
-  AngularFirestoreDocument,
-} from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
-import { Timestamp } from '@firebase/firestore-types';
 
 import { RunState } from '@shared';
 
@@ -32,6 +28,21 @@ export class RunsService {
       mergeMap(user => {
         const path = `runs/state/${user.uid}/${id}`;
         return this.afs.doc<RunState>(path).valueChanges();
+      })
+    );
+  }
+
+  public getRuns(): Observable<RunState[]> {
+    // TODO: Remove hack for testing.  We should probably create a mock runs service.
+    if (!this.afa.user) {
+      return from([]);
+    }
+    return this.afa.user.pipe(
+      mergeMap(user => {
+        const path = `runs/state/${user.uid}`;
+        return this.afs
+          .collection<RunState>(path, ref => ref.orderBy('timestamp'))
+          .valueChanges();
       })
     );
   }

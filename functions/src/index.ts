@@ -51,6 +51,13 @@ export const newRun = functions.https.onCall(
 
     const db = admin.firestore();
     const ref = await states(db, context).add(state);
+
+    // Write back state with its id;
+    state.id = ref.id;
+    await states(db, context)
+      .doc(ref.id)
+      .set(state);
+
     await plans(db, context)
       .doc(ref.id)
       .set(plan);

@@ -27,7 +27,6 @@ export class GenerateComponent implements OnInit {
   onNewRun() {
     this.requesting = true;
     this.runsSvc.newRun().subscribe(resp => {
-      console.log(resp);
       this.router.navigate([`/run/${resp}`]);
     });
   }
