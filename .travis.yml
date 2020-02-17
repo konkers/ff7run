@@ -1,7 +1,6 @@
 language: node_js
 node_js:
   - '10'
-sudo: false
 
 addons:
   chrome: stable
@@ -13,7 +12,7 @@ cache:
 
 before_script:
   - npm install -g @angular/cli
-  - npm install -g eslint tslint
+  - npm install -g firebase-tools  # Needed to override old version in deploy
 
 install:
   - npm install
@@ -25,10 +24,12 @@ script:
   - npm run fmt:check
   - ng build --prod
   - (cd functions ; npm run lint)
+  - (cd functions ; npm run build)
 
 deploy:
   provider: firebase
-  token:
-    secure: XsjcyzzVvY6+2AccmKkWPtHY1/87pDAFiFjNWa3XY6Ixg4nx2vVYofnIaqWe0Fqd4b25yCP8FPsq4NM1IfXc5YsESHnRJiZt4QUbAOFqeMKVzpQ0F/DI+uV6/iZ0KpfOA8uvRltCBxhfRh6a4CWXNirn9YoO7cIo2yG9fCOUGSJ2lyIjWC5Y5Xbj8vyp2GXJfIS4Z9zYTk+7eegQLxOo68FxY0yXhUv4exlD0534HVdrJ0FLrRcnO44EpPUh2cW2ahsFvpmVR0PejBTAZB53xTEX2qR0GBskzVecfk3wBvtvAtldoNuoK2fyFYTsqC3mon2zkvErCuRjXBZs6WiEI1XDoVNuN1qCo1xKv6bi4R18xr3sinUysCH0lmWB+AKyWJgncyzAec1OEqapdtsTFhWU13rhtm9U+jYBBFhNIUofxA3H31UHvu8jhfkEDAc6TaIICwMEq6ENLx9sgTxfQgsv+VR+4bRTFcvEEoSf+0j2tSb4f3LKTD5MZ9QJ/rdqOm8uXopqfWPiAfR3YaqB21voqD53Und+sWc4lax+EsFGpd1r+HO/H2iHxE9n41SX5w12z9dUMLWOp7YE1jYVM8KWpIoYTybUvL09Muh0QOsIgC7eC6cssaNfut+UMrWsDMbGtLDfHpAa72tgYwBiNWxXkLp1QAPpgNqPITZN1WA=
+  edge: true # opt in to dpl v2
   on:
     branch: release
+  token:
+    secure: 'UsNIoI1dsRmt8UwsrbOvdoxlOuh0VZ3pnMgNZX3Y5hSj/9yI1CSYWqimp6/HpT12iUMkHm4XDy1CF9cjvEeY5XZwpBZ/LhND+PSy9ZS3RhHyqkRD3F/vVbUCFYaDMnJ22UBYdZIGkbvllujZmjWKBoPoGIOntKQ7loEx1BFQ5acy+CxPICm5oyoc/4Fr7ZWZSP4T/P7DrAFmjITOsrTh29SSJpS00ZExu1IqVKGr5NnGdhRcrQsOWm6/zQsU7PHK9squ3NuNmWoxjcMEcnSmLSrxmA76zuiwYDagVkWwVuIvTMThvEtiI2f8RpsZfpMpG43uHvHWwIMJOg9bRml4YcnGiz8rzWup5Ao4SASWE3vwKSSLhabtGvidqqSyHf/++OlyI7NI45RU5lTEoi7PBRhspcKTnLUoQvOchJO5VtSEYyyvB/6KMjWS905U6MAFKwdYWd+lIQeYNGOwPU3dgOS5DSay0Mhe+PZPnGCZPYgk+moeHZ94Vc3xWuRrqRMpREkqg8LHhnXUN/Q/oeXvgVpXDOg3oWNYv5tSIxMb/hur2sPrREesYc3n3T9AnkJE8ZZsKHRtzRYzvg0ONh+8p2vvuP8XOAw2eSVlGvnqiPKci61xZ2D3bdZ1rIdzAIAiu42G+XJqBF8H5VS0afyt1xXXB5iNTJL/HJQ502mCXCI='
