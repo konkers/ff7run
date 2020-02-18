@@ -1,5 +1,9 @@
 # FFVII Runs Website
 
+[![Build Status](https://travis-ci.org/konkers/ff7run.svg?branch=master)](https://travis-ci.org/konkers/ff7run)
+
+This is the code that backs the website [ff7.run](https://ff7.run).
+
 ## Code organization
 
 The code in this repos is divided into 3 sections:
