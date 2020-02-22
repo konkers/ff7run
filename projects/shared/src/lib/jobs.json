@@ -1,23 +1,24 @@
 [
     {
         "name": "White Wizard",
-        "desc": "This job/class is meant to emulate what you might expect a White Mage to be in other Final Fantasy games. Consider Porom or Rosa to be the basis.",
+        "desc": "The White Wizard is a master of curative, and beneficial abilities. Restoring HP, reviving the swooned from near death. Determining what weaknesses an enemy may have to alert the others. They also have the ability to harness their very HP totals to increase their MP total.",
         "materia": [
             "Restore",
             "Heal",
             "Revive",
             "Transform",
             "Mystify",
-            "Time",
             "Barrier",
-            "Exit",
             "Shield",
+            "Full Cure",
+            "MP Turbo",
+            "All",
             "Sense",
             "W-Magic",
             "MP Plus",
             "Magic Plus",
-            "All",
-            "Full Cure"
+            "Mega All",
+            "HP <-> MP"
         ]
     },
     {
@@ -25,17 +26,17 @@
         "desc": "Discovering an affinity to fire, and heat, at a young age, the Pyromaniac has spent a lifetime specializing in the manipulation of flame. Be it casting simple fire spells, or summoning powerful fire-based monsters this job is ready to dish out damage. A feat that can be boosted even further with certain support Materia. Finally, if it all looks like it's going to hell a last ditch effort summon of the beast Phoenix might be all you need to get back on your feet.",
         "materia": [
             "Fire",
-            "Ifrit",
-            "Phoenix",
             "All",
             "Elemental",
-            "Magic Counter",
-            "Magic Plus",
-            "MP Plus",
             "Final Attack",
+            "Magic Counter",
             "MP Turbo",
             "Quadra Magic",
-            "Mega All"
+            "Magic Plus",
+            "Mega All",
+            "MP Plus",
+            "Ifrit",
+            "Phoenix"
         ]
     },
     {
@@ -43,50 +44,51 @@
         "desc": "Imagine growing up being absolutely comfortable with the icy chill of cold temperatures. If you can relate to that, you might just be a Cryotechnic. These ice-based mages primarily focus on hitting things hard with icy blasts, along with occasionally relying on the ice goddess Shiva for extra assistance. An affinity for manipulating water has also granted this class the ability to harness curative magic, via manipulations of the waters of life.",
         "materia": [
             "Ice",
-            "MP Plus",
-            "Magic Plus",
-            "Shiva",
+            "Restore",
             "All",
             "Elemental",
+            "Magic Counter",
             "MP Turbo",
             "Quadra Magic",
-            "Magic Counter",
+            "Magic Plus",
             "Mega All",
-            "Restore"
+            "MP Plus",
+            "Shiva"
         ]
     },
     {
         "name": "Rogue",
-        "desc": "the idea is something similar to what you might expect a WoW Rogue to be, with a loose base off of Locke from FF6.",
+        "desc": "It is an unfortunate thing that our world harbors criminals. People who steal from others, and in some cases they even steal their very lives. Stab a victim with a poison coated dagger, steal their things, and then exit before the authorities can arrive. Everything is planned out to a T. The most value for their score. The most experience that can be conned out of the situation. Luck is on their side.",
         "materia": [
-            "Poison",
             "Exit",
-            "Steal",
-            "Counter",
-            "Speed Plus",
-            "Luck Plus",
-            "Gil Plus",
+            "Poison",
             "Added Effect",
+            "Counter",
+            "Sneak Attack",
             "Steal As Well",
-            "Sneak Attack"
+            "Steal",
+            "Exp Plus",
+            "Gil Plus",
+            "Luck Plus",
+            "Speed Plus"
         ]
     },
     {
         "name": "Engineer",
-        "desc": "The lightning-based counter to Pyro and Cryo, the Engineer is focused on delivering upon the people powerful lightning blasts. The class is also capable of summoning the powerful elder god Ramuh for additional electrical damage. Finally the ability to shock new life into people like a defribulator has allowed the use of Revive Materia. Knowledge of the mechanical side of items has granted them the ability to use items twice in a single round.",
+        "desc": "Every so often a person is born who some say can outright \"speak\" to machinery. They dance with electricity like they themselves are a bolt of lightning. Sometimes they craft the magnificent inventions you see around the planet such as the airship. But sometimes? An engineer just kinda wants to zap the crap out of other people. Be it with normal magical energy or calling in a favor from their Poker buddy Ramuh ... you're in big trouble. But it's not all pain, as they're not above prodding their dead friends with a zappy stick to bring them BACK FROM THE DEAD. Finally a natural affinity for tinkering has gifted them with the natural speed with item use to throw out two in a single moment.",
         "materia": [
             "Lightning",
             "Revive",
-            "MP Plus",
-            "Magic Plus",
-            "Ramuh",
             "All",
             "Elemental",
-            "Quadra Magic",
-            "MP Turbo",
             "Magic Counter",
+            "MP Turbo",
+            "Quadra Magic",
+            "W-Item",
+            "Magic Plus",
             "Mega All",
-            "W-Item"
+            "MP Plus",
+            "Ramuh"
         ]
     },
     {
@@ -142,15 +144,17 @@
     },
     {
         "name": "Paladin",
-        "desc": "A holy knight. This class has some healing ability, along with primarily battle commands and protection based stuff. This class also is the sole user of KOTR, as it seemed to make sense for a holy knight to be able to summon what is essentially the Knights of the Round Table.",
+        "desc": "As a child the holy Paladin was showered in religion. Stories of the fabled Knights of the Round Table protecting the innocent caused them to take up arms to protect as well. A devotion to the deity Alexander grants them the power to imbue their strikes with the power of the divine, which also has the added benefit of allowing them to restore, and revive the lame. Legend has it, in moments of absolute crisis their connection to the holy light allows them to summon the legendary Knights they grew up obsessing over to aid them in battle.",
         "materia": [
+            "Barrier",
+            "Heal",
             "Restore",
-            "Cover",
-            "Knights of the Round",
-            "HP Plus",
             "Revive",
-            "Deathblow",
-            "Barrier"
+            "Elemental",
+            "Cover",
+            "HP Plus",
+            "Alexander",
+            "Knights of the Round"
         ]
     },
     {
@@ -179,6 +183,40 @@
             "Deathblow",
             "Cover",
             "HP Plus"
+        ]
+    },
+    {
+        "name": "Ninja",
+        "desc": "Silence incarnate. The sudden stroke of death. The ninja is a master of subversion, and finishing an opponent from the shadows. Incredibly fast, and capable of ending a life in a multitude of ways, the main question with the ninja is how do I want to wreak havoc today? Shall I throw a blade into an opponent's chest perhaps? Put them to sleep with a well timed blow? Use the power of Odin himself to deliver a stab so potent the opponent immediately expires? Or shall the ninja just avoid battle entirely and remain in the shadows waiting to strike?",
+        "materia": [
+            "Exit",
+            "Seal",
+            "Added Cut",
+            "Added Effect",
+            "Sneak Attack",
+            "Deathblow",
+            "Throw",
+            "Enemy Away",
+            "Long Range",
+            "Pre-Emptive",
+            "Speed Plus",
+            "Odin"
+        ]
+    },
+    {
+        "name": "Dragoon",
+        "desc": "In the past the world was plagued by Dragons. To combat this specific talented people were taught a specific brand of warfare which allowed them to take to the skies to battle the Dragons in their own backyard. Through the years they've learned to harness the power of thunder, and leap into the air to deliver upon their foes blows with double or even four times the damage that they'd normally deliver. Strangely, they've also developed a kinship with the Dragon Lord Bahamut, and some say that fabled beast will actually assist the Dragoon when called upon.",
+        "materia": [
+            "Lightning",
+            "Elemental",
+            "Double Cut",
+            "Counter",
+            "Long Range",
+            "Luck Plus",
+            "HP Plus",
+            "Bahamut",
+            "Bahamut ZERO",
+            "Neo Bahamut"
         ]
     }
 ]
