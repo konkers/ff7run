@@ -6,7 +6,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, from } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 
-import { RunState } from '@shared';
+import { JobRunConfig, RunState } from '@shared';
 
 @Injectable({
   providedIn: 'root',
@@ -18,9 +18,9 @@ export class RunsService {
     private fns: AngularFireFunctions
   ) {}
 
-  public newRun(): Observable<string> {
+  public newRun(config: JobRunConfig): Observable<string> {
     const callable = this.fns.httpsCallable('newRun');
-    return callable({ ty: 'job' });
+    return callable({ ty: 'job', job_config: config });
   }
 
   public getRun(id: string): Observable<RunState> {

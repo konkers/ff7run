@@ -2,14 +2,23 @@ import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 
 import {
+  DefaultDriver,
+  JobRunGenerator,
   RunConfig,
   RunData,
   RunState,
   RunType,
   UnlockJobCommand,
   character_list,
-  new_job_run,
 } from '../../projects/shared/src/public-api';
+
+export class BackendDriver extends DefaultDriver {
+  public getTimestamp(): admin.firestore.Timestamp {
+    return admin.firestore.Timestamp.now();
+  }
+}
+
+const jobRunGen = new JobRunGenerator(new BackendDriver());
 
 admin.initializeApp(functions.config().firebase);
 const charMap = character_list().reduce((map, obj) => {
@@ -41,7 +50,7 @@ export const newRun = functions.https.onCall(
       );
     }
 
-    const [plan, state] = new_job_run(config);
+    const [plan, state] = jobRunGen.newRun(config);
 
     // Hack to work around Timestamp class mismatch between frontend and backend.
     // We should refactor new_job_run() and friends to take a timestamp.

@@ -1,7 +1,3 @@
-// These are needed to generate timestamps.
-import firebase from '@firebase/app';
-import '@firebase/firestore';
-
 import {
   CharacterInfo,
   RunConfig,
@@ -10,60 +6,79 @@ import {
   RunStatus,
 } from './model';
 import { character_list, job_list } from './data';
+import { Driver, DefaultDriver } from './driver';
 
-// TODO: Investigate using window.crypto.getRandomValues() for better
-// RNG.  Does this work with cloud functions?
-function get_random_int(max: number): number {
-  return Math.floor(Math.random() * Math.floor(max));
-}
+export class JobRunGenerator {
+  private driver: Driver;
 
-function pick_char(chars: CharacterInfo[]): string {
-  return chars[get_random_int(chars.length)].name;
-}
-
-export function new_job_run(config: RunConfig): [RunData, RunState] {
-  const plan: RunData = {
-    job_data: {
-      jobs: {},
-    },
-  };
-
-  const jobList = job_list();
-
-  for (const char of character_list()) {
-    plan.job_data.jobs[char.name] = {
-      name: jobList[get_random_int(jobList.length)].name,
-      has_lure: false,
-      has_underwater: false,
-    };
+  constructor(driver?: Driver) {
+    if (driver) {
+      this.driver = driver;
+    } else {
+      this.driver = new DefaultDriver();
+    }
   }
 
-  const lureChars = character_list().filter(c => c.can_lure);
-  plan.job_data.jobs[pick_char(lureChars)].has_lure = true;
+  private pickChar(chars: CharacterInfo[]): string {
+    return chars[this.driver.getRandomInt(chars.length)].name;
+  }
 
-  const underwaterChars = character_list().filter(c => c.can_underwater);
-  plan.job_data.jobs[pick_char(underwaterChars)].has_underwater = true;
-
-  // Start the current run with cloud unlocked.
-  const data: RunData = {
-    job_data: {
-      jobs: {
-        Cloud: plan.job_data.jobs['Cloud'.toString()],
+  public newRun(config: RunConfig): [RunData, RunState] {
+    const plan: RunData = {
+      job_data: {
+        jobs: {},
       },
-    },
-  };
+    };
 
-  return [
-    plan,
-    {
-      id: '',
-      config,
-      status: RunStatus.Active,
-      timestamp: firebase.firestore.Timestamp.now(),
-      log: [
-        { when: firebase.firestore.Timestamp.now(), message: 'Run started.' },
-      ],
-      data,
-    },
-  ];
+    // Create a shallow clone so that we can modify the list.
+    const jobList = job_list().slice(0);
+
+    for (const char of character_list()) {
+      const jobIndex = this.driver.getRandomInt(jobList.length);
+
+      plan.job_data.jobs[char.name] = {
+        name: jobList[jobIndex].name,
+        has_lure: false,
+        has_underwater: false,
+      };
+
+      if (config.job_config && config.job_config.unique_jobs) {
+        // If we are choosing unique jobs, remove this one from the pool.
+        jobList[jobIndex] = jobList[jobList.length - 1];
+        jobList.pop();
+      }
+    }
+
+    const lureChars = character_list().filter(c => c.can_lure);
+    plan.job_data.jobs[this.pickChar(lureChars)].has_lure = true;
+
+    const underwaterChars = character_list().filter(c => c.can_underwater);
+    plan.job_data.jobs[this.pickChar(underwaterChars)].has_underwater = true;
+
+    // Start the current run with cloud unlocked.
+    const data: RunData = {
+      job_data: {
+        jobs: {
+          Cloud: plan.job_data.jobs['Cloud'.toString()],
+        },
+      },
+    };
+
+    return [
+      plan,
+      {
+        id: '',
+        config,
+        status: RunStatus.Active,
+        timestamp: this.driver.getTimestamp(),
+        log: [
+          {
+            when: this.driver.getTimestamp(),
+            message: 'Run started.',
+          },
+        ],
+        data,
+      },
+    ];
+  }
 }

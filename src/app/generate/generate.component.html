@@ -5,12 +5,12 @@
             <h2>a FF VII challenge run</h2>
         </div>
         <div class="docs-header-start">
-
             <span *ngIf="afa.user | async as user; else showLogin">
                 <span *ngIf="!requesting">
                     <button mat-raised-button (click)="onNewRun()">New Run</button>
                     <span class="spacer"></span>
                     <button mat-raised-button (click)="gotoRuns()">My Runs</button>
+
                 </span>
                 <span class="center" *ngIf="requesting">
                     <mat-progress-spinner color="accent" mode="indeterminate">
@@ -21,6 +21,13 @@
             <ng-template #showLogin>
                 <button mat-raised-button (click)="login()">login</button>
             </ng-template>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="flags">
+            <mat-slide-toggle color="accent" [checked]="config.unique_jobs"
+                (change)="config.unique_jobs = $event.checked">
+                Ensure unique jobs.
+            </mat-slide-toggle>
         </div>
     </div>
 </header>

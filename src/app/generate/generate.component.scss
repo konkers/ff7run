@@ -74,9 +74,15 @@ $margin-promotion-sections-small: 15px;
 }
 
 .docs-header-start,
+.flags,
 .docs-homepage-bottom-start {
   text-align: center;
   margin: $margin-promotion-sections 0;
+}
+
+.flags {
+  text-align: center;
+  margin: $margin-promotion-sections-small 0;
 }
 
 .docs-homepage-promo-img,
