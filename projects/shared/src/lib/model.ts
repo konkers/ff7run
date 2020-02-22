@@ -53,8 +53,13 @@ export interface RunData {
   job_data?: JobRunData;
 }
 
+export interface JobRunConfig {
+  unique_jobs: boolean;
+}
+
 export interface RunConfig {
   ty: RunType;
+  job_config?: JobRunConfig;
 }
 
 export interface LogEntry {

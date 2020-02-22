@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatJumbotronModule } from '@angular-material-extensions/jumbotron';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -72,6 +73,7 @@ const debugProviders = environment.production
     MatJumbotronModule,
     MatMenuModule,
     MatProgressSpinnerModule,
+    MatSlideToggleModule,
     MatTableModule,
     MatToolbarModule,
   ],

@@ -1,11 +1,34 @@
-import { RunType, RunStatus, MateriaType } from './model';
+import { RunData, RunType, RunStatus, MateriaType } from './model';
 import { character_list, job_list, materia_list } from './data';
-import { new_job_run } from './job-run';
+import { JobRunGenerator } from './job-run';
+import { Driver, DefaultDriver } from './driver';
+
+export class TestDriver extends DefaultDriver {
+  public getRandomInt(max: number): number {
+    return 0;
+  }
+}
 
 const materiaMap = materia_list().reduce((map, obj) => {
   map[obj.name] = obj;
   return map;
 }, {});
+
+function maxJobCount(plan: RunData): number {
+  const jobCounts = job_list().reduce((map, obj) => {
+    map[obj.name] = 0;
+    return map;
+  }, {});
+
+  for (const job of Object.values(plan.job_data.jobs)) {
+    jobCounts[job.name] += 1;
+  }
+
+  return Object.values<number>(jobCounts).reduce(
+    (a: number, b: number): number => Math.max(a, b),
+    0
+  );
+}
 
 describe('MATERIA_LIST', () => {
   it('Steal is command type', () => {
@@ -26,7 +49,8 @@ describe('JOB_LIST', () => {
 });
 
 describe('new_job_run', () => {
-  const [plan, state] = new_job_run({ ty: RunType.Job });
+  const gen = new JobRunGenerator(new TestDriver());
+  const [plan, state] = gen.newRun({ ty: RunType.Job });
 
   it('is of Job type', () => {
     expect(state.config.ty).toBe(RunType.Job);
@@ -50,5 +74,36 @@ describe('new_job_run', () => {
     for (const char of character_list()) {
       expect(char.name in plan.job_data.jobs).toBeTruthy();
     }
+  });
+});
+
+describe('new_job_run unique flag', () => {
+  const gen = new JobRunGenerator(new TestDriver());
+
+  it('"unique_jobs: false" has dup jobs', () => {
+    const [plan, state] = gen.newRun({
+      ty: RunType.Job,
+      job_config: {
+        unique_jobs: false,
+      },
+    });
+    expect(maxJobCount(plan)).toBeGreaterThan(1);
+  });
+
+  it('default has dup jobs', () => {
+    const [plan, state] = gen.newRun({
+      ty: RunType.Job,
+    });
+    expect(maxJobCount(plan)).toBeGreaterThan(1);
+  });
+
+  it('"unique_jobs: true" has no dup jobs', () => {
+    const [plan, state] = gen.newRun({
+      ty: RunType.Job,
+      job_config: {
+        unique_jobs: true,
+      },
+    });
+    expect(maxJobCount(plan)).toBe(1);
   });
 });

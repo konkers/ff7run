@@ -6,6 +6,7 @@ import { Observable, from } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 
+import { JobRunConfig } from '@shared';
 import { RunsService } from '../runs.service';
 
 @Component({
@@ -15,6 +16,9 @@ import { RunsService } from '../runs.service';
 })
 export class GenerateComponent implements OnInit {
   requesting = false;
+  config: JobRunConfig = {
+    unique_jobs: true,
+  };
 
   constructor(
     public afa: AngularFireAuth,
@@ -26,7 +30,7 @@ export class GenerateComponent implements OnInit {
 
   onNewRun() {
     this.requesting = true;
-    this.runsSvc.newRun().subscribe(resp => {
+    this.runsSvc.newRun(this.config).subscribe(resp => {
       this.router.navigate([`/run/${resp}`]);
     });
   }

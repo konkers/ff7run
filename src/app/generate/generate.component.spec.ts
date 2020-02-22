@@ -4,7 +4,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireFunctions } from '@angular/fire/functions';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import {
   angularFireAuthStub,
@@ -20,7 +22,12 @@ describe('GenerateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, MatProgressSpinnerModule],
+      imports: [
+        RouterTestingModule,
+        MatDividerModule,
+        MatProgressSpinnerModule,
+        MatSlideToggleModule,
+      ],
       declarations: [GenerateComponent],
       providers: [
         { provide: AngularFireAuth, useValue: angularFireAuthStub },
