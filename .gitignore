@@ -1,6 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 /functions/lib
+/.firebase
+/firebase-debug.log
+/firestore-debug.log
 
 # compiled output
 /dist
