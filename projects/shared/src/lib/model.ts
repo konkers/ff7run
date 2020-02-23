@@ -11,6 +11,8 @@ export enum MateriaType {
 export interface Materia {
   name: string;
   ty: MateriaType;
+  location: string;
+  effects: string[];
 }
 
 export interface CharacterInfo {

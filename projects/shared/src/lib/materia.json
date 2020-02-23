@@ -1,338 +1,695 @@
 [
     {
-        "name": "Steal",
-        "ty": "command"
-    },
-    {
-        "name": "Sense",
-        "ty": "command"
-    },
-    {
-        "name": "Enemy Skill",
-        "ty": "command"
-    },
-    {
-        "name": "Throw",
-        "ty": "command"
-    },
-    {
-        "name": "Manipulate",
-        "ty": "command"
-    },
-    {
-        "name": "Deathblow",
-        "ty": "command"
-    },
-    {
-        "name": "Morph",
-        "ty": "command"
-    },
-    {
-        "name": "Double Cut",
-        "ty": "command"
-    },
-    {
-        "name": "W-Summon",
-        "ty": "command"
-    },
-    {
-        "name": "Slash-All",
-        "ty": "command"
-    },
-    {
-        "name": "Mime",
-        "ty": "command"
-    },
-    {
-        "name": "W-Magic",
-        "ty": "command"
-    },
-    {
-        "name": "W-Item",
-        "ty": "command"
-    },
-    {
-        "name": "Master Command",
-        "ty": "command"
-    },
-    {
-        "name": "Cover",
-        "ty": "independent"
-    },
-    {
-        "name": "Chocobo Lure",
-        "ty": "independent"
-    },
-    {
-        "name": "Long Range",
-        "ty": "independent"
-    },
-    {
-        "name": "Counter",
-        "ty": "independent"
-    },
-    {
-        "name": "Enemy Lure",
-        "ty": "independent"
-    },
-    {
-        "name": "Speed Plus",
-        "ty": "independent"
-    },
-    {
-        "name": "MP Plus",
-        "ty": "independent"
-    },
-    {
-        "name": "HP Plus",
-        "ty": "independent"
-    },
-    {
-        "name": "Luck Plus",
-        "ty": "independent"
-    },
-    {
-        "name": "Magic Plus",
-        "ty": "independent"
-    },
-    {
-        "name": "Gil Plus",
-        "ty": "independent"
-    },
-    {
-        "name": "Pre-Emptive",
-        "ty": "independent"
-    },
-    {
-        "name": "Exp Plus",
-        "ty": "independent"
-    },
-    {
-        "name": "Enemy Away",
-        "ty": "independent"
-    },
-    {
-        "name": "HP <-> MP",
-        "ty": "independent"
-    },
-    {
-        "name": "Mega All",
-        "ty": "independent"
-    },
-    {
-        "name": "Underwater",
-        "ty": "independent"
-    },
-    {
-        "name": "Ice",
-        "ty": "magic"
-    },
-    {
-        "name": "Lightning",
-        "ty": "magic"
-    },
-    {
-        "name": "Restore",
-        "ty": "magic"
-    },
-    {
-        "name": "Fire",
-        "ty": "magic"
-    },
-    {
-        "name": "Poison",
-        "ty": "magic"
-    },
-    {
-        "name": "Earth",
-        "ty": "magic"
-    },
-    {
-        "name": "Heal",
-        "ty": "magic"
-    },
-    {
-        "name": "Revive",
-        "ty": "magic"
-    },
-    {
-        "name": "Seal",
-        "ty": "magic"
-    },
-    {
-        "name": "Transform",
-        "ty": "magic"
-    },
-    {
-        "name": "Mystify",
-        "ty": "magic"
-    },
-    {
-        "name": "Time",
-        "ty": "magic"
-    },
-    {
-        "name": "Gravity",
-        "ty": "magic"
-    },
-    {
-        "name": "Destruct",
-        "ty": "magic"
-    },
-    {
-        "name": "Barrier",
-        "ty": "magic"
-    },
-    {
-        "name": "Exit",
-        "ty": "magic"
-    },
-    {
-        "name": "Comet",
-        "ty": "magic"
-    },
-    {
-        "name": "Full Cure",
-        "ty": "magic"
-    },
-    {
-        "name": "Contain",
-        "ty": "magic"
-    },
-    {
-        "name": "Ultima",
-        "ty": "magic"
-    },
-    {
-        "name": "Shield",
-        "ty": "magic"
-    },
-    {
-        "name": "Master Magic",
-        "ty": "magic"
-    },
-    {
-        "name": "Choco/Mog",
-        "ty": "summon"
-    },
-    {
-        "name": "Shiva",
-        "ty": "summon"
-    },
-    {
-        "name": "Ifrit",
-        "ty": "summon"
-    },
-    {
-        "name": "Ramuh",
-        "ty": "summon"
-    },
-    {
-        "name": "Titan",
-        "ty": "summon"
-    },
-    {
-        "name": "Odin",
-        "ty": "summon"
-    },
-    {
-        "name": "Kajata",
-        "ty": "summon"
-    },
-    {
-        "name": "Titan",
-        "ty": "summon"
-    },
-    {
-        "name": "Odin",
-        "ty": "summon"
-    },
-    {
-        "name": "Kjata",
-        "ty": "summon"
-    },
-    {
-        "name": "Bahamut",
-        "ty": "summon"
-    },
-    {
-        "name": "Alexander",
-        "ty": "summon"
-    },
-    {
-        "name": "Neo Bahamut",
-        "ty": "summon"
-    },
-    {
-        "name": "Leviathan",
-        "ty": "summon"
-    },
-    {
-        "name": "Phoenix",
-        "ty": "summon"
-    },
-    {
-        "name": "Hades",
-        "ty": "summon"
-    },
-    {
-        "name": "Bahamut ZERO",
-        "ty": "summon"
-    },
-    {
-        "name": "Typoon",
-        "ty": "summon"
-    },
-    {
-        "name": "Knights of the Round",
-        "ty": "summon"
-    },
-    {
-        "name": "All",
-        "ty": "support"
-    },
-    {
-        "name": "Elemental",
-        "ty": "support"
-    },
-    {
-        "name": "Added Effect",
-        "ty": "support"
-    },
-    {
-        "name": "MP Absorb",
-        "ty": "support"
-    },
-    {
-        "name": "HP Absorb",
-        "ty": "support"
-    },
-    {
-        "name": "Added Cut",
-        "ty": "support"
-    },
-    {
-        "name": "MP Turbo",
-        "ty": "support"
-    },
-    {
-        "name": "Steal As Well",
-        "ty": "support"
-    },
-    {
-        "name": "Magic Counter",
-        "ty": "support"
-    },
-    {
-        "name": "Final Attack",
-        "ty": "support"
-    },
-    {
-        "name": "Quadra Magic",
-        "ty": "support"
-    },
-    {
-        "name": "Sneak Attack",
-        "ty": "support"
+        "ty": "magic",
+        "effects": [
+            "Ice",
+            "Ice 2",
+            "Ice 3"
+        ],
+        "location": "Start with Equipped",
+        "name": "Ice"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Bolt",
+            "Bolt 2",
+            "Bolt 3"
+        ],
+        "location": "Start with Equipped",
+        "name": "Lightning"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Cure",
+            "Cure 2",
+            "Regen",
+            "Cure 3"
+        ],
+        "location": "Reactor #1",
+        "name": "Restore"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Fire",
+            "Fire 2",
+            "Fire 3"
+        ],
+        "location": "Sector 7 Materia Shop",
+        "name": "Fire"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Bio",
+            "Bio 2",
+            "Bio 3"
+        ],
+        "location": "Shinra HQ Floor 67",
+        "name": "Poison"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Quake",
+            "Quake 2",
+            "Quake 3"
+        ],
+        "location": "Kalm",
+        "name": "Earth"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Poisona",
+            "Esuna",
+            "Resist"
+        ],
+        "location": "Kalm",
+        "name": "Heal"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Life 1",
+            "Life 2"
+        ],
+        "location": "Junon",
+        "name": "Revive"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Sleep",
+            "Silence"
+        ],
+        "location": "Junon",
+        "name": "Seal"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Mini",
+            "Toad"
+        ],
+        "location": "Mt. Corel Railroad Tracks",
+        "name": "Transform"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Confu",
+            "Berserk"
+        ],
+        "location": "Gongaga",
+        "name": "Mystify"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Haste",
+            "Slow",
+            "Stop"
+        ],
+        "location": "Gongaga",
+        "name": "Time"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Demi",
+            "Demi 2",
+            "Demi 3"
+        ],
+        "location": "Defeat Gi Nattak",
+        "name": "Gravity"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "DeBarrier",
+            "DeSpell",
+            "Death"
+        ],
+        "location": "Shinra Mansion",
+        "name": "Destruct"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Barrier",
+            "M-Barrier",
+            "Reflect",
+            "Wall"
+        ],
+        "location": "Rocket Town",
+        "name": "Barrier"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Escape",
+            "Remove"
+        ],
+        "location": "Rocket Town",
+        "name": "Exit"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Comet",
+            "Comet 2"
+        ],
+        "location": "Forgotten City",
+        "name": "Comet"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "FullCure"
+        ],
+        "location": "Cosmo Canyon",
+        "name": "Full Cure"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Freeze",
+            "Break",
+            "Tornado",
+            "Flare"
+        ],
+        "location": "White Chocobo in Mideel",
+        "name": "Contain"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Ultima"
+        ],
+        "location": "North Corel after stopping the train",
+        "name": "Ultima"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "Shield"
+        ],
+        "location": "Northern Crater",
+        "name": "Shield"
+    },
+    {
+        "ty": "magic",
+        "effects": [
+            "All possible green materia spells."
+        ],
+        "location": null,
+        "name": "Master Magic"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "Steal",
+            "Mug"
+        ],
+        "location": "Midgar Sewers",
+        "name": "Steal"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "Sense"
+        ],
+        "location": "Sector 6 Playground",
+        "name": "Sense"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "E. Skill"
+        ],
+        "location": "Shinra HQ Level 68",
+        "name": "Enemy Skill"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "Throw",
+            "Coin"
+        ],
+        "location": "Initially equipped on Yuffie",
+        "name": "Throw"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "Manip."
+        ],
+        "location": "Initially equipped on Cait Sith",
+        "name": "Manipulate"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "D. Blow"
+        ],
+        "location": "Road near Gongaga Reactor",
+        "name": "Deathblow"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "Morph"
+        ],
+        "location": "Temple of the Ancients",
+        "name": "Morph"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "2x-Cut",
+            "4x-Cut"
+        ],
+        "location": "Sunken Gelnika",
+        "name": "Double Cut"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "Ability to cast two summons in one round."
+        ],
+        "location": "Gold Saucer Battle Square",
+        "name": "W-Summon"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "Slash-All",
+            "Flash"
+        ],
+        "location": "Ancient Forest",
+        "name": "Slash-All"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "Mime"
+        ],
+        "location": "Cave South of Wutai",
+        "name": "Mime"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "Ability to cast two spells in a single turn"
+        ],
+        "location": "Northern Crater",
+        "name": "W-Magic"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "X-Item"
+        ],
+        "location": "Underneath Midgar",
+        "name": "W-Item"
+    },
+    {
+        "ty": "command",
+        "effects": [
+            "All yellow commands and abilities available"
+        ],
+        "location": null,
+        "name": "Master Command"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Defense increase, and will protect other characters."
+        ],
+        "location": "Aeris' Garden",
+        "name": "Cover"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Attracts chocobo battles in specific locations"
+        ],
+        "location": "Chocobo Billy",
+        "name": "Chocobo Lure"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Allows equal damage from the back row"
+        ],
+        "location": "Climb vines in Mythril Cave",
+        "name": "Long Range"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Counter physical attacks when damaged."
+        ],
+        "location": "Defeat Materia Keeper",
+        "name": "Counter"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Do you want random encounters? This is how we get random encounters."
+        ],
+        "location": "250 BP at Battle Square",
+        "name": "Enemy Lure"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Increases speed stat"
+        ],
+        "location": "4,000 BP at Battle Square",
+        "name": "Speed Plus"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Increases max MP"
+        ],
+        "location": "Cosmo Canyon",
+        "name": "MP Plus"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Increases max HP"
+        ],
+        "location": "Cosmo Canyon",
+        "name": "HP Plus"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Increases luck stat"
+        ],
+        "location": "Temple of the Ancients",
+        "name": "Luck Plus"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Increases magic attack stat."
+        ],
+        "location": "Corral Valley Cave",
+        "name": "Magic Plus"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Increased gold after battles"
+        ],
+        "location": "10,000 GP at Wonder Square",
+        "name": "Gil Plus"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Increased chance of preemptive attacks"
+        ],
+        "location": "Gold Saucer",
+        "name": "Pre-Emptive"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Increased EXP post battle."
+        ],
+        "location": "2,000 GP at Wonder Square",
+        "name": "Exp Plus"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Decreases enemy encounter rates"
+        ],
+        "location": "Chocobo Racing",
+        "name": "Enemy Away"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Swaps HP and MP values"
+        ],
+        "location": "Cave North of Corel",
+        "name": "HP <-> MP"
+    },
+    {
+        "ty": "independent",
+        "effects": [
+            "Commands or Spells target everything"
+        ],
+        "location": "Northern Crater",
+        "name": "Mega All"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Removes timer from Emerald Weapon fight."
+        ],
+        "location": "Kalm Traveler",
+        "name": "Underwater"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Choco/Mog"
+        ],
+        "location": "Chocobo Ranch",
+        "name": "Choco/Mog"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Shiva"
+        ],
+        "location": "Little Girl in Junon",
+        "name": "Shiva"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Ifrit"
+        ],
+        "location": "Shinra Boat",
+        "name": "Ifrit"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Ramuh"
+        ],
+        "location": "Chocobo Jockey Room",
+        "name": "Ramuh"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Titan"
+        ],
+        "location": "Gongaga Destroyed Reactor",
+        "name": "Titan"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Odin"
+        ],
+        "location": "Shinra Mansion Safe",
+        "name": "Odin"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Kjata"
+        ],
+        "location": "Sleeping Forest",
+        "name": "Kjata"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Bahamut"
+        ],
+        "location": "Temple of the Ancients",
+        "name": "Bahamut"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Alexander"
+        ],
+        "location": "Northern Crater 1st Visit",
+        "name": "Alexander"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Neo Bahamut"
+        ],
+        "location": "Whirlwind Maze",
+        "name": "Neo Bahamut"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Leviathan"
+        ],
+        "location": "Kill Godo in Wutai",
+        "name": "Leviathan"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Phoenix"
+        ],
+        "location": "Fort Condor",
+        "name": "Phoenix"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Hades"
+        ],
+        "location": "Shunken Gelnika",
+        "name": "Hades"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Bahamut ZERO"
+        ],
+        "location": "Huge Blue Materia",
+        "name": "Bahamut ZERO"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Typoon"
+        ],
+        "location": "Ancient Forest",
+        "name": "Typoon"
+    },
+    {
+        "ty": "summon",
+        "effects": [
+            "Knights of the Round"
+        ],
+        "location": "NE Uncharted Island",
+        "name": "Knights of the Round"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "All summons in one delicious package"
+        ],
+        "location": null,
+        "name": "Master Summon"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "Paired Materia affects all"
+        ],
+        "location": "Sector 7 Beginner's Shop",
+        "name": "All"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "Paired Matera adds Elemental Property"
+        ],
+        "location": "Shinra HQ 62nd Floor",
+        "name": "Elemental"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "Paired Materia adds Effect"
+        ],
+        "location": "Cave of Gi",
+        "name": "Added Effect"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "Drains MP from opponents"
+        ],
+        "location": "Wutai Item Shop Chest",
+        "name": "MP Absorb"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "Drains HP from opponents"
+        ],
+        "location": "Wutai Cat House",
+        "name": "HP Absorb"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "Additional attack after using Paired Matera"
+        ],
+        "location": "Wintery Forest",
+        "name": "Added Cut"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "Spells calls extra MP but do more damage"
+        ],
+        "location": "Whirlwind Maze",
+        "name": "MP Turbo"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "Steals after using Paired Materia"
+        ],
+        "location": "Wutai Mountains",
+        "name": "Steal As Well"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "Counter attacks with paired Green or Red Materia"
+        ],
+        "location": "Chocobo Racing",
+        "name": "Magic Counter"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "Use paired materia upon death"
+        ],
+        "location": "Battle Arena Expert Battles",
+        "name": "Final Attack"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "Use attached Materia four times"
+        ],
+        "location": "Cave South of Wutai",
+        "name": "Quadra Magic"
+    },
+    {
+        "ty": "support",
+        "effects": [
+            "Uses attached materia automatically at the beginning of battles."
+        ],
+        "location": "Chocobo Racing",
+        "name": "Sneak Attack"
     }
 ]
