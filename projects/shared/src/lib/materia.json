@@ -233,13 +233,6 @@
     {
         "clr": "Yellow",
         "ty": "Command",
-        "eff": [],
-        "loc": null,
-        "name": null
-    },
-    {
-        "clr": "Yellow",
-        "ty": "Command",
         "eff": [
             "Steal",
             "Mug"
@@ -366,13 +359,6 @@
         ],
         "loc": null,
         "name": "Master Command"
-    },
-    {
-        "clr": "Purple",
-        "ty": "Independent",
-        "eff": [],
-        "loc": null,
-        "name": null
     },
     {
         "clr": "Purple",
