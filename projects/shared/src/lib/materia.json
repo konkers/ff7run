@@ -171,7 +171,7 @@
             "FullCure"
         ],
         "location": "Cosmo Canyon",
-        "name": "Fullcure"
+        "name": "Full Cure"
     },
     {
         "ty": "magic",
@@ -206,7 +206,7 @@
             "All possible green materia spells."
         ],
         "location": null,
-        "name": "master magic"
+        "name": "Master Magic"
     },
     {
         "ty": "command",
@@ -322,7 +322,7 @@
             "All yellow commands and abilities available"
         ],
         "location": null,
-        "name": "master command"
+        "name": "Master Command"
     },
     {
         "ty": "independent",
@@ -354,7 +354,7 @@
             "Counter physical attacks when damaged."
         ],
         "location": "Defeat Materia Keeper",
-        "name": "Counter Attack"
+        "name": "Counter"
     },
     {
         "ty": "independent",
@@ -426,7 +426,7 @@
             "Increased EXP post battle."
         ],
         "location": "2,000 GP at Wonder Square",
-        "name": "Exp. Plus"
+        "name": "Exp Plus"
     },
     {
         "ty": "independent",
@@ -594,7 +594,7 @@
             "All summons in one delicious package"
         ],
         "location": null,
-        "name": "master summon"
+        "name": "Master Summon"
     },
     {
         "ty": "support",
