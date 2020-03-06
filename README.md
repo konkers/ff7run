@@ -21,13 +21,38 @@ The code in this repos is divided into 3 sections:
 
 ### Setup
 
-To develop, you'll need to install [Node JS](https://nodejs.org/). 
+#### System packages.
 
-Once installed, install the Angular and Firebase CLI utilities:
+To develop, you'll need to install:
+* [Node JS](https://nodejs.org/)
+* [OpenJDK](https://openjdk.java.net/) (for the firebase emulators)
+
+#### Global NPM dependencies.
+
+Once installed, install the Typescript, Angular, and Firebase CLI utilities:
 
 ```sh
+npm install -g typescript
 npm install -g @angular/cli
 npm install -g firebase-tools
+```
+
+#### Local NPM dependencies.
+
+You'll also need to instal npm depedancies for the frontend and backend:
+
+```sh
+npm install
+(cd projects/shared; npm install)
+(cd functions; npm install)
+```
+### Data Development
+
+Data is stored in `projects/shared/src/lib` in JSON5 format.   The files are
+converted to json for consumption by the frontend and backend using:
+
+```sh
+(cd projects/shared; npm run convert-data)
 ```
 
 ### Frontend development
