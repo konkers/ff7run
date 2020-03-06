@@ -32,6 +32,11 @@ export class RunsService {
     );
   }
 
+  public getAbsoluteRun(uid: string, id: string): Observable<RunState> {
+    const path = `runs/state/${uid}/${id}`;
+    return this.afs.doc<RunState>(path).valueChanges();
+  }
+
   public getRuns(): Observable<RunState[]> {
     // TODO: Remove hack for testing.  We should probably create a mock runs service.
     if (!this.afa.user) {

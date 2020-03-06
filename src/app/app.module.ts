@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatJumbotronModule } from '@angular-material-extensions/jumbotron';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -34,6 +35,7 @@ import { CharacterComponent } from './character/character.component';
 import { MateriaComponent } from './materia/materia.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { RunListComponent } from './run-list/run-list.component';
+import { OverlayComponent } from './overlay/overlay.component';
 
 const debugProviders = environment.production
   ? []
@@ -56,6 +58,7 @@ const debugProviders = environment.production
     MateriaComponent,
     ToolbarComponent,
     RunListComponent,
+    OverlayComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +73,7 @@ const debugProviders = environment.production
     MatCardModule,
     MatDividerModule,
     MatIconModule,
+    MatInputModule,
     MatJumbotronModule,
     MatMenuModule,
     MatProgressSpinnerModule,

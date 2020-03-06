@@ -4,14 +4,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireFunctions } from '@angular/fire/functions';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { RunComponent } from './run.component';
-import { CharacterComponent } from '../character/character.component';
-import { MateriaComponent } from '../materia/materia.component';
+import { OverlayComponent } from './overlay.component';
 
 import {
   angularFireAuthStub,
@@ -19,20 +13,14 @@ import {
   angularFireFunctionsStub,
 } from '../../testing/firebase.mock';
 
-describe('RunComponent', () => {
-  let component: RunComponent;
-  let fixture: ComponentFixture<RunComponent>;
+describe('OverlayComponent', () => {
+  let component: OverlayComponent;
+  let fixture: ComponentFixture<OverlayComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        MatCardModule,
-        MatIconModule,
-        MatInputModule,
-        NoopAnimationsModule,
-        RouterTestingModule,
-      ],
-      declarations: [CharacterComponent, MateriaComponent, RunComponent],
+      imports: [RouterTestingModule],
+      declarations: [OverlayComponent],
       providers: [
         { provide: AngularFireAuth, useValue: angularFireAuthStub },
         { provide: AngularFireFunctions, useValue: angularFireFunctionsStub },
@@ -42,7 +30,7 @@ describe('RunComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RunComponent);
+    fixture = TestBed.createComponent(OverlayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

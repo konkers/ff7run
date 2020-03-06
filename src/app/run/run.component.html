@@ -1,9 +1,16 @@
 <div class="container" *ngIf="run" class="char-list">
     <div *ngFor="let char of characters" class="char">
-        <app-character [name]="char.name" [job]="getJob(char.name)" 
-        [hasLure]="hasLure(char.name)"
-        [hasUnderwater]="hasUnderwater(char.name)"
-        (unlock)="unlockCharacter(char.name)">
+        <app-character [name]="char.name" [job]="getJob(char.name)" [hasLure]="hasLure(char.name)"
+            [hasUnderwater]="hasUnderwater(char.name)" (unlock)="unlockCharacter(char.name)">
         </app-character>
     </div>
+</div>
+<div>
+    <mat-form-field class="overlay-url">
+        <mat-label>Overlay URL</mat-label>
+        <input matInput disabled [value]="overlayUrl">
+        <button mat-button matSuffix mat-icon-button aria-label="Copy" (click)="copyValue(overlayUrl)">
+            <mat-icon>file_copy</mat-icon>
+        </button>
+    </mat-form-field>
 </div>
