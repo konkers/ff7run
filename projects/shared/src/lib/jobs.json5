@@ -257,6 +257,32 @@ only right in this world.",
         ]
     },
     {
+        name: "Time Mage",
+        desc: "When you can manipulate time itself there is virtually nothing \
+you cannot do. Slow an opponent down? Speed a friend up? Prevent a battle from \
+even taking place to begin with? Trivial. A Time Mage is all about \
+manipulating the playing field to suit your interests. You want to slow down \
+time so the fight takes just long enough to squeeze out a little extra \
+experience? There's an app for that. Taking the enemy back before they were \
+even born and rearranging their molecules to make them an item instead? Oh you \
+bet there's an app for that too.",
+        materia: [
+            "Destruct",
+            "Gravity",
+            "Time",
+            "All",
+            "Added Effect",
+            "Morph",
+            "Enemy Away",
+            "Exp Plus",
+            "HP <-> MP",
+            "Magic Counter",
+            "MP Plus",
+            "Pre-Emptive",
+            "Speed Plus",
+        ]
+    },
+    {
         name: "Berserker",
         desc: "Imagine being one of the best swordsmen or women on the planet. \
 You can dance with your blade like a surgeon. Nobody can see it coming. But \
