@@ -354,7 +354,7 @@
             "Counter physical attacks when damaged."
         ],
         "location": "Defeat Materia Keeper",
-        "name": "Counter"
+        "name": "Counter Attack"
     },
     {
         "ty": "independent",
@@ -663,10 +663,18 @@
     {
         "ty": "support",
         "effects": [
+            "Counter attacks with paired Command"
+        ],
+        "location": "Nothern Cave",
+        "name":  "Counter"
+    },
+    {
+        "ty": "support",
+        "effects": [
             "Counter attacks with paired Green or Red Materia"
         ],
-        "location": "Chocobo Racing",
-        "name": "Magic Counter"
+        "location": "Chocobo Racing, Nothern Cave",
+        "name":  "Magic Counter"
     },
     {
         "ty": "support",

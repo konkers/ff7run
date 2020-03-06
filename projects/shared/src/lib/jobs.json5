@@ -1,48 +1,38 @@
 [
     {
-        "name": "White Wizard",
-        "desc": "The White Wizard is a master of curative, and beneficial abilities. Restoring HP, reviving the swooned from near death. Determining what weaknesses an enemy may have to alert the others. They also have the ability to harness their very HP totals to increase their MP total.",
-        "materia": [
-            "Restore",
-            "Heal",
-            "Revive",
-            "Transform",
-            "Mystify",
-            "Barrier",
-            "Shield",
-            "Full Cure",
-            "MP Turbo",
-            "All",
-            "Sense",
-            "W-Magic",
-            "MP Plus",
-            "Magic Plus",
-            "Mega All",
-            "HP <-> MP"
-        ]
-    },
-    {
-        "name": "Pyromaniac",
-        "desc": "Discovering an affinity to fire, and heat, at a young age, the Pyromaniac has spent a lifetime specializing in the manipulation of flame. Be it casting simple fire spells, or summoning powerful fire-based monsters this job is ready to dish out damage. A feat that can be boosted even further with certain support Materia. Finally, if it all looks like it's going to hell a last ditch effort summon of the beast Phoenix might be all you need to get back on your feet.",
-        "materia": [
+        name: "Pyromaniac",
+        desc: "Discovering an affinity to fire, and heat, at a young age, the \
+Pyromaniac has spent a lifetime specializing in the manipulation of flame. Be \
+it casting simple fire spells, or summoning powerful fire-based monsters this \
+job is ready to dish out damage. A feat that can be boosted even further with \
+certain support Materia. Finally, if it all looks like it's going to hell a \
+last ditch effort summon of the beast Phoenix might be all you need to get \
+back on your feet.",
+        materia: [
             "Fire",
             "All",
             "Elemental",
             "Final Attack",
-            "Magic Counter",
             "MP Turbo",
+            "Magic Counter",
             "Quadra Magic",
             "Magic Plus",
             "Mega All",
             "MP Plus",
             "Ifrit",
-            "Phoenix"
+            "Phoenix",
         ]
     },
     {
-        "name": "Cryotechnic",
-        "desc": "Imagine growing up being absolutely comfortable with the icy chill of cold temperatures. If you can relate to that, you might just be a Cryotechnic. These ice-based mages primarily focus on hitting things hard with icy blasts, along with occasionally relying on the ice goddess Shiva for extra assistance. An affinity for manipulating water has also granted this class the ability to harness curative magic, via manipulations of the waters of life.",
-        "materia": [
+        name: "Cryotechnic",
+        desc: "Imagine growing up being absolutely comfortable with the icy \
+chill of cold temperatures. If you can relate to that, you might just be a \
+Cryotechnic. These ice-based mages primarily focus on hitting things hard \
+with icy blasts, along with occasionally relying on the ice goddess Shiva for \
+extra assistance. An affinity for manipulating water has also granted this \
+class the ability to harness curative magic, via manipulations of the waters \
+of life.",
+        materia: [
             "Ice",
             "Restore",
             "All",
@@ -53,30 +43,22 @@
             "Magic Plus",
             "Mega All",
             "MP Plus",
-            "Shiva"
+            "Shiva",
         ]
     },
     {
-        "name": "Rogue",
-        "desc": "It is an unfortunate thing that our world harbors criminals. People who steal from others, and in some cases they even steal their very lives. Stab a victim with a poison coated dagger, steal their things, and then exit before the authorities can arrive. Everything is planned out to a T. The most value for their score. The most experience that can be conned out of the situation. Luck is on their side.",
-        "materia": [
-            "Exit",
-            "Poison",
-            "Added Effect",
-            "Counter",
-            "Sneak Attack",
-            "Steal As Well",
-            "Steal",
-            "Exp Plus",
-            "Gil Plus",
-            "Luck Plus",
-            "Speed Plus"
-        ]
-    },
-    {
-        "name": "Engineer",
-        "desc": "Every so often a person is born who some say can outright \"speak\" to machinery. They dance with electricity like they themselves are a bolt of lightning. Sometimes they craft the magnificent inventions you see around the planet such as the airship. But sometimes? An engineer just kinda wants to zap the crap out of other people. Be it with normal magical energy or calling in a favor from their Poker buddy Ramuh ... you're in big trouble. But it's not all pain, as they're not above prodding their dead friends with a zappy stick to bring them BACK FROM THE DEAD. Finally a natural affinity for tinkering has gifted them with the natural speed with item use to throw out two in a single moment.",
-        "materia": [
+        name: "Engineer",
+        desc: "Every so often a person is born who some say can outright \
+\"speak\" to machinery. They dance with electricity like they themselves are \
+a bolt of lightning. Sometimes they craft the magnificent inventions you see \
+around the planet such as the airship. But sometimes? An engineer just kinda \
+wants to zap the crap out of other people. Be it with normal magical energy \
+or calling in a favor from their Poker buddy Ramuh ... you're in big trouble. \
+But it's not all pain, as they're not above prodding their dead friends with \
+a zappy stick to bring them BACK FROM THE DEAD. Finally a natural affinity for \
+tinkering has gifted them with the natural speed with item use to throw out \
+two in a single moment.",
+        materia: [
             "Lightning",
             "Revive",
             "All",
@@ -88,107 +70,20 @@
             "Magic Plus",
             "Mega All",
             "MP Plus",
-            "Ramuh"
-        ]
-    },
-    {
-        "name": "Blue Mage",
-        "desc": "A character class which primarily focuses on the learning of enemy attacks and delivering them upon the enemy in return. Enemy Lure is available for sanity purposes when attempting to get that one god damn skill.",
-        "materia": [
-            "Enemy Skill",
-            "MP Plus",
-            "Enemy Lure",
-            "MP Absorb"
-        ]
-    },
-    {
-        "name": "Black Wizard",
-        "desc": "The counter to the White Wizard class, which instead specializes in black magic styles.",
-        "materia": [
-            "Fire",
-            "Ice",
-            "Lightning",
-            "Poison",
-            "Earth",
-            "Comet",
-            "Ultima",
-            "MP Plus",
-            "Magic Plus",
-            "All",
-            "W-Magic",
-            "Quadra Magic",
-            "Magic Counter",
-            "MP Turbo"
-        ]
-    },
-    {
-        "name": "Summoner",
-        "desc": "The Rydia class. This class gets summoning ability, and not a whole lot else. Some summons were left out to ensure this isn't just the \"can use all red\" class, and to provide some uniqueness to classes they're exclusive to.",
-        "materia": [
-            "Choco/Mog",
-            "Ifrit",
-            "Shiva",
             "Ramuh",
-            "Titan",
-            "Odin",
-            "Kjata",
-            "Bahamut",
-            "Alexander",
-            "Neo Bahamut",
-            "Hades",
-            "Bahamut ZERO",
-            "Typoon",
-            "Magic Plus",
-            "MP Plus"
         ]
     },
     {
-        "name": "Paladin",
-        "desc": "As a child the holy Paladin was showered in religion. Stories of the fabled Knights of the Round Table protecting the innocent caused them to take up arms to protect as well. A devotion to the deity Alexander grants them the power to imbue their strikes with the power of the divine, which also has the added benefit of allowing them to restore, and revive the lame. Legend has it, in moments of absolute crisis their connection to the holy light allows them to summon the legendary Knights they grew up obsessing over to aid them in battle.",
-        "materia": [
-            "Barrier",
-            "Heal",
-            "Restore",
-            "Revive",
-            "Elemental",
-            "Cover",
-            "HP Plus",
-            "Alexander",
-            "Knights of the Round"
-        ]
-    },
-    {
-        "name": "Mime",
-        "desc": "...It's a mime? Exp Plus also available to a) provide one reason why you MIGHT want one, and be it makes sense in concept because who's learning quicker than a god damn mime? Likewise the plus materia is allowed under the concept that they're trying to emulate the stats of the person they're copying.",
-        "materia": [
-            "Mime",
-            "Exp Plus",
-            "Speed Plus",
-            "Magic Plus",
-            "Luck Plus",
-            "MP Plus",
-            "HP Plus"
-        ]
-    },
-    {
-        "name": "Magic Knight",
-        "desc": "Based off of a suggestion by Fu, this class attempts to emulate the class of the same name from FFV.",
-        "materia": [
-            "Ice",
-            "Lightning",
-            "Fire",
-            "Poison",
-            "Earth",
-            "Elemental",
-            "Deathblow",
-            "Cover",
-            "HP Plus"
-        ]
-    },
-    {
-        "name": "Ninja",
-        "desc": "Silence incarnate. The sudden stroke of death. The ninja is a master of subversion, and finishing an opponent from the shadows. Incredibly fast, and capable of ending a life in a multitude of ways, the main question with the ninja is how do I want to wreak havoc today? Shall I throw a blade into an opponent's chest perhaps? Put them to sleep with a well timed blow? Use the power of Odin himself to deliver a stab so potent the opponent immediately expires? Or shall the ninja just avoid battle entirely and remain in the shadows waiting to strike?",
-        "materia": [
+        name: "Ninja",
+        desc: "Silence incarnate. The sudden stroke of death. The ninja is a \
+master of subversion, and finishing an opponent from the shadows. Incredibly \
+fast, and capable of ending a life in a multitude of ways, the main question \
+with the ninja is how do I want to wreak havoc today? Shall I throw a blade \
+into an opponent's chest perhaps? Put them to sleep with a well timed blow? \
+Use the power of Odin himself to deliver a stab so potent the opponent \
+immediately expires? Or shall the ninja just avoid battle entirely and \
+remain in the shadows waiting to strike?",
+        materia: [
             "Exit",
             "Seal",
             "Added Cut",
@@ -200,23 +95,354 @@
             "Long Range",
             "Pre-Emptive",
             "Speed Plus",
-            "Odin"
+            "Odin",
         ]
     },
     {
-        "name": "Dragoon",
-        "desc": "In the past the world was plagued by Dragons. To combat this specific talented people were taught a specific brand of warfare which allowed them to take to the skies to battle the Dragons in their own backyard. Through the years they've learned to harness the power of thunder, and leap into the air to deliver upon their foes blows with double or even four times the damage that they'd normally deliver. Strangely, they've also developed a kinship with the Dragon Lord Bahamut, and some say that fabled beast will actually assist the Dragoon when called upon.",
-        "materia": [
+        name: "Paladin",
+        desc: "As a child the holy Paladin was showered in religion. Stories \
+of the fabled Knights of the Round Table protecting the innocent caused them \
+to take up arms to protect as well. A devotion to the deity Alexander grants \
+them the power to imbue their strikes with the power of the divine, which also \
+has the added benefit of allowing them to restore, and revive the lame. Legend \
+has it, in moments of absolute crisis their connection to the holy light \
+allows them to summon the legendary Knights they grew up obsessing over to aid \
+them in battle.",
+        materia: [
+            "Barrier",
+            "Heal",
+            "Restore",
+            "Revive",
+            "Elemental",
+            "Cover",
+            "HP Plus",
+            "Alexander",
+            "Knights of the Round",
+        ]
+    },
+    {
+        name: "Dragoon",
+        desc: "In the past the world was plagued by Dragons. To combat this \
+specific talented people were taught a specific brand of warfare which allowed \
+them to take to the skies to battle the Dragons in their own backyard. Through \
+the years they've learned to harness the power of thunder, and leap into the \
+air to deliver upon their foes blows with double or even four times the damage \
+that they'd normally deliver. Strangely, they've also developed a kinship with \
+the Dragon Lord Bahamut, and some say that fabled beast will actually assist \
+the Dragoon when called upon.",
+        materia: [
             "Lightning",
             "Elemental",
             "Double Cut",
-            "Counter",
+            "Counter Attack",
+            "HP Plus",
             "Long Range",
             "Luck Plus",
-            "HP Plus",
             "Bahamut",
             "Bahamut ZERO",
-            "Neo Bahamut"
+            "Neo Bahamut",
         ]
-    }
+    },
+    {
+        name: "Rogue",
+        desc: "It is an unfortunate thing that our world harbors criminals. \
+People who steal from others, and in some cases they even steal their very \
+lives. Stab a victim with a poison coated dagger, steal their things, and \
+then exit before the authorities can arrive. Everything is planned out to a T. \
+The most value for their score. The most experience that can be conned out of \
+the situation. Luck is on their side.",
+        materia: [
+            "Exit",
+            "Poison",
+            "Added Effect",
+            "Sneak Attack",
+            "Steal As Well",
+            "Steal",
+            "Counter Attack",
+            "Exp Plus",
+            "Gil Plus",
+            "Luck Plus",
+            "Speed Plus",
+        ]
+    },
+    {
+        name: "White Wizard",
+        desc: "There are people who harbor the great desire to only help \
+others. To put smiles on faces. Folk of this kind typically follow the path of \
+the White Wizard. Specializing in curative, and supportive magics the White \
+Wizard has but one goal: to keep everybody on their feet and in the best shape \
+possible. In most cases this involves merely throwing a heal spell here, or a \
+revive spell there - but that isn't the only trick the White Wizard has up \
+it's sleeve. It also has the power to sense an enemy's weakness. The power to \
+cast twice in a single turn, and the power to give up their own life force to \
+be able to cast further and longer.",
+        materia: [
+            "Barrier",
+            "Full Cure",
+            "Heal",
+            "Mystify",
+            "Restore",
+            "Revive",
+            "Shield",
+            "Transform",
+            "All",
+            "MP Turbo",
+            "Sense",
+            "W-Magic",
+            "HP <-> MP",
+            "Magic Plus",
+            "Mega All",
+            "MP Plus",
+        ]
+    },
+    {
+        name: "Black Wizard",
+        desc: "Some people just want to see the world burn. They follow the \
+path of the Black Mage and specifically master all forms of destructive \
+magics. To make matters worse, as if merely throwing down the destructive \
+Ultima wasn't enough for you - they can even cast it twice in a single turn at \
+high levels. They may not be able to use quad magic, but one can't argue that \
+their overall spell variety doesn't completely make up for it. Certain they're \
+a job you'll want on a long journey.",
+        materia: [
+            "Comet",
+            "Contain",
+            "Earth",
+            "Fire",
+            "Ice",
+            "Lightning",
+            "Poison",
+            "Ultima",
+            "All",
+            "MP Absorb",
+            "MP Turbo",
+            "W-Magic",
+            "HP <-> MP",
+            "Magic Plus",
+            "Mega All",
+            "MP Plus",
+        ]
+    },
+    {
+        name: "Blue Mage",
+        desc: "Those who study monsters diligently may one day learn to be \
+able to use the very abilities that were once unique to the foes that plague \
+the land. The Blue Mage is a master of such a learning process. They can seek \
+enemies out, becoming more likely to encounter them. Well trained Blue Mages \
+can even manipulate the very enemies they battle to ensure the skill they're \
+looking to study occurs at all.",
+        materia: [
+            "MP Absorb", "Enemy Skill", "Manipulate", "Enemy Lure", "Magic Plus", "MP Plus",
+        ]
+    },
+    {
+        name: "Dark Knight",
+        desc: "There are some who allow themselves to succumb to the darkness. \
+To become agents of Hades themselves. It is likely they turn to the path of \
+the Dark Knight. Warriors which specialize in sucking the very life form their \
+opponents to pad their own HP. Before delivering powerful deathblows. They say \
+in extreme cases their pact with the dark lord itself allows them to summon \
+him for assistance. The Dark Knight is very much the direct opposite of the \
+Paladin, but we can always hope that one day they learn that justice isn't the \
+only right in this world.",
+        materia: [
+            "Destruct",
+            "Mystify",
+            "Added Effect",
+            "Final Attack",
+            "Deathblow",
+            "HP Absorb",
+            "HP Plus",
+            "Hades",
+        ]
+    },
+    {
+        name: "Berserker",
+        desc: "Imagine being one of the best swordsmen or women on the planet. \
+You can dance with your blade like a surgeon. Nobody can see it coming. But \
+sometimes? Sometimes you get a little bit ill tempered and it turns into a \
+Limp Bizkit song up in here. You might just be a Berserker. But on the upside? \
+Sometimes they're so erratic they can confuse opponents with their movements \
+and strikes via the use of an added effect.",
+        materia: [
+            "Mystify",
+            "Added Cut",
+            "Added Effect",
+            "Counter",
+            "Final Attack",
+            "Double Cut",
+            "Slash-All",
+            "Counter Attack",
+            "HP Plus",
+        ]
+
+    },
+    {
+        // Formerly Mime
+        name: "Onion Mime",
+        desc: "Sometimes you don't know what you want to do for a living. You \
+coast through most of your life just kind of copying what other people are \
+doing until you find you have a talent in a specific thing ... or in the case \
+of the Onion Mime: literally everything. Ultimate power rests at your \
+fingertips. You can do everything. ...But you just gotta get through 95% of \
+the game first.",
+        materia: [
+            "Master Magic",
+            "Master Command",
+            "Mime",
+            "HP Plus",
+            "Luck Plus",
+            "Magic Plus",
+            "MP Plus",
+            "Speed Plus",
+            "Master Summon",
+        ]
+    },
+    {
+        name: "Magic Knight",
+        desc: "Those who follow the path of the Knight often end up dreaming \
+of the more magical side of things. In this they sacrifice some fighting \
+prowess in exchange for the supernatural ability to enchant their blade with a \
+variety of effects becoming what is known as a Magic Knight. Face to face with \
+a creature of pure ice? Light your sword on fire and cut them in half! An \
+element for every occasion and in times of weakness on the enemy's behalf the \
+ability to cut them in twine with but a single blow.",
+        materia: [
+            "Destruct",
+            "Earth",
+            "Fire",
+            "Ice",
+            "Lightning",
+            "Poison",
+            "Added Cut",
+            "Added Effect",
+            "Elemental",
+            "Deathblow",
+            "Double Cut",
+            "Sense",
+            "Cover",
+            "Luck Plus",
+            "HP Plus",
+        ]
+    },
+    {
+        // Formerly Summoner
+        name: "Caller",
+        desc: "Those who are learning the art of summoning powerful beasts \
+directly from the Feymarch are known as Callers. It is a hard life in which \
+you have to suffer through battle to earn the beast's respect. But to solve \
+this puzzle the Caller is granted special skills such as incredibly powerful \
+black magic, and the ability to deliver powerful strikes from the back row. If \
+ever there was a class that captures the spirit of the \"all-arounder\", the \
+Caller probably fits that bill.",
+        materia: [
+            "Contain",
+            "Ultima",
+            "All",
+            "Magic Counter",
+            "W-Summon",
+            "Long Range",
+            "HP <-> MP",
+            "Magic Plus",
+            "MP Plus",
+            "Choco/Mog",
+            "Ifrit",
+            "Kjata",
+            "Leviathan",
+            "Odin",
+            "Ramuh",
+            "Shiva",
+            "Titan",
+            "Typoon",
+        ],
+    },
+    {
+        name: "Monk",
+        desc: "A Monk is a master of harnessing one's spiritual energy, called \
+\"chi\". They are dangerous warriors who have mastered the ultimate forms of \
+martial arts - and yet while you may think them deadly, in reality their \
+ultimate goal is to do no harm. They cherish helping, and healing above all \
+else. Their battle prowess remains instead developed for self-defense, and the \
+defense of others.",
+        materia: [
+            "Restore",
+            "Shield",
+            "All",
+            "Counter",
+            "Magic Counter",
+            "Slash-All",
+            "Counter Attack",
+            "HP Plus",
+            "Luck Plus",
+            "Pre-Emptive",
+            "Speed Plus",
+        ]
+    },
+    {
+        name: "Beastmaster",
+        desc: "The Beastmaster is a being that feels at one with nature. They \
+don't simple like animals, they are almost something of a kindred spirit. They \
+can convince the Moogles and the Chocobos to be their allies. They can use \
+long whips to attack enemies at a distance, and turn others into toads. This \
+class may never reach the sheer raw power of some other jobs on this list, but \
+their tricks are not to be scoffed at.",
+        materia: [
+            "Transform",
+            "Added Effect",
+            "Counter",
+            "Magic Counter",
+            "Manipulate",
+            "Enemy Away",
+            "Enemy Lure",
+            "Long Range",
+            "Choco/Mog",
+            "Kjata",
+        ]
+    },
+    {
+        name: "Hunter",
+        desc: "The Hunter is a creature of knowing how to line up your strike \
+and deliver said blow with power to spare. They stalk their prey from the \
+cover of bushes only to fling an arrow directly into their hearts, allowing \
+for an attack before the battle has officially begun. Rapid fire shots \
+continue the devastation, along with a talent for carefully timed counters. \
+Combined with more protective classes this job can be quite dangerous indeed.",
+        materia: [
+            "Added Cut",
+            "Counter",
+            "Sneak Attack",
+            "Double Cut",
+            "Slash-All",
+            "Long Range",
+            "Luck Plus",
+            "Pre-Emptive",
+            "Speed Plus",
+        ]
+    },
+    {
+        name: "Red Mage",
+        desc: "Sometimes a person is indecisive. They can't decide if they \
+wish to be a white mage, a black mage, or a physical fighter. So when \
+confronted with this concept they have but one recourse - to put their \
+chocolate with their peanut butter and be everything all at once. \
+Unfortunately this means they've never fully specialized and can't use the \
+most powerful spells of either world but as a utility player? They're second \
+to none!",
+        materia: [
+            "Earth",
+            "Exit",
+            "Fire",
+            "Heal",
+            "Ice",
+            "Lightning",
+            "Restore",
+            "Added Cut",
+            "Elemental",
+            "MP Turbo",
+            "Slash-All",
+            "HP <-> MP",
+            "Magic Plus",
+            "MP Plus",
+        ]
+    },
 ]
