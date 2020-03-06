@@ -1,8 +1,9 @@
-import { CharacterInfo, Job, Materia } from './model';
+import { CharacterInfo, Job, JobAliases, Materia } from './model';
 
 import * as materia from './materia.json';
 import * as characters from './characters.json';
 import * as jobs from './jobs.json';
+import * as jobAliases from './job-aliases.json';
 
 const defaultName = 'default';
 
@@ -27,5 +28,13 @@ export function job_list(): Job[] {
     return jobs[defaultName];
   } else {
     return jobs;
+  }
+}
+
+export function job_aliases(): JobAliases {
+  if (defaultName in jobAliases) {
+    return jobAliases[defaultName];
+  } else {
+    return jobAliases;
   }
 }

@@ -9,4 +9,10 @@ describe('JobService', () => {
     const service: JobService = TestBed.get(JobService);
     expect(service).toBeTruthy();
   });
+
+  it('should support aliases', () => {
+    const service: JobService = TestBed.get(JobService);
+    expect(service.getJob('Mime').name).toBe('Onion Mime');
+    expect(service.getJob('Summoner').name).toBe('Caller');
+  });
 });

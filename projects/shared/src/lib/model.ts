@@ -44,6 +44,10 @@ export interface JobInfo {
   has_underwater: boolean;
 }
 
+export interface JobAliases {
+  [index: string]: string;
+}
+
 export interface JobRunJobList {
   [index: string]: JobInfo; // maps character name to job.
 }
