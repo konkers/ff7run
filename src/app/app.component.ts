@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UrlSegment, Router } from '@angular/router';
 
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
@@ -8,10 +9,17 @@ import { auth } from 'firebase/app';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'ff7run';
+  showHeader = true;
 
-  constructor(public afa: AngularFireAuth) {}
+  constructor(private router: Router, public afa: AngularFireAuth) {}
+
+  ngOnInit() {
+    this.router.events.subscribe(() => {
+      this.showHeader = !this.router.url.includes('overlay');
+    });
+  }
 
   login() {
     this.afa.auth.signInWithPopup(new auth.GoogleAuthProvider());
