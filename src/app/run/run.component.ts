@@ -25,13 +25,58 @@ export class RunComponent implements OnInit {
   userId: string;
   overlayUrl: string;
 
+  overlayBgColorData: string;
+  get overlayBgColor(): string {
+    return this.overlayBgColorData;
+  }
+  set overlayBgColor(val: string) {
+    this.overlayBgColorData = val;
+    this.updateOverlayUrl();
+  }
+
+  textColorData: string;
+  get textColor(): string {
+    return this.textColorData;
+  }
+  set textColor(val: string) {
+    this.textColorData = val;
+    this.updateOverlayUrl();
+  }
+
+  showMateriaData: boolean;
+  get showMateria(): boolean {
+    return this.showMateriaData;
+  }
+  set showMateria(val: boolean) {
+    this.showMateriaData = val;
+    this.updateOverlayUrl();
+  }
+
+  charWidthData = 200;
+  get charWidth(): number {
+    return this.charWidthData;
+  }
+  set charWidth(val: number) {
+    this.charWidthData = val;
+    this.updateOverlayUrl();
+  }
+
+  setCharWidthData: boolean;
+  get setCharWidth(): boolean {
+    return this.setCharWidthData;
+  }
+  set setCharWidth(val: boolean) {
+    this.setCharWidthData = val;
+    this.updateOverlayUrl();
+  }
+
   constructor(
     private afa: AngularFireAuth,
     private route: ActivatedRoute,
     private router: Router,
     private service: RunsService,
     private jobs: JobService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.afa.user.subscribe(user => {
@@ -58,9 +103,27 @@ export class RunComponent implements OnInit {
   }
 
   updateOverlayUrl() {
+    const params = {};
+
+    if (this.textColor) {
+      params['textcolor'.toString()] = this.textColor;
+    }
+
+    if (this.overlayBgColor) {
+      params['bgcolor'.toString()] = this.overlayBgColor;
+    }
+
+    if (this.showMateria) {
+      params['showMateria'.toString()] = 'true';
+    }
+
+    if (this.setCharWidth) {
+      params['charWidth'.toString()] = this.charWidth;
+    }
+
     this.overlayUrl =
       window.location.origin +
-      this.router.createUrlTree(['overlay', this.userId, this.id]).toString();
+      this.router.createUrlTree(['overlay', this.userId, this.id], { queryParams: params }).toString();
   }
 
   jobUnlocked(character: string): boolean {

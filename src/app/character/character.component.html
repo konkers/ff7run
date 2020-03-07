@@ -1,8 +1,7 @@
 <mat-card>
     <mat-card-header>
-        <div mat-card-avatar class="portrait"
-        [style.backgroundImage]="'url(\'assets/portraits/' + name + '.png\')'" 
-        ></div>
+        <div mat-card-avatar class="portrait" [style.backgroundImage]="'url(\'assets/portraits/' + name + '.png\')'">
+        </div>
         <mat-card-title>{{name}}</mat-card-title>
         <mat-card-subtitle *ngIf="job">
             {{job}}

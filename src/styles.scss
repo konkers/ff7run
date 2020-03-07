@@ -1,12 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import './app-theme';
-
+@import "./app-theme";
 
 @include mat-core();
 
 @include angular-material-theme($theme);
 @include ff7run-app-theme($theme);
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// Define reactor7 font
+@font-face {
+  font-family: "Reactor7";
+  src: url("./assets/Reactor7.woff") format("woff");
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
