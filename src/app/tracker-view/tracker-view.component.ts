@@ -26,10 +26,9 @@ export class TrackerViewComponent implements OnInit {
 
   characters = character_list();
 
-  constructor(private jobs: JobService) { }
+  constructor(private jobs: JobService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   getJob(character: string): string {
     const job = this.run.data.job_data.jobs[character];
@@ -50,8 +49,11 @@ export class TrackerViewComponent implements OnInit {
 
   getMateria(character: string): string {
     const job = this.run.data.job_data.jobs[character];
-    const materia = this.jobs.getJob(job.name).materia;
+    if (!job) {
+      return '';
+    }
 
+    const materia = this.jobs.getJob(job.name).materia;
 
     return materia.join(', ');
   }

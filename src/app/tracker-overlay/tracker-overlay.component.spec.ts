@@ -20,17 +20,14 @@ describe('TrackerOverlayComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-      ],
+      imports: [RouterTestingModule],
       declarations: [TrackerOverlayComponent, TrackerViewComponent],
       providers: [
         { provide: AngularFireAuth, useValue: angularFireAuthStub },
         { provide: AngularFireFunctions, useValue: angularFireFunctionsStub },
         { provide: AngularFirestore, useValue: angularFirestoreStub },
       ],
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
