@@ -24,6 +24,15 @@ export class TrackerViewComponent implements OnInit {
   @Input()
   charWidth: number;
 
+  @Input()
+  portraitSize: number;
+
+  @Input()
+  jobTextSize: number;
+
+  @Input()
+  materiaTextSize: number;
+
   characters = character_list();
 
   constructor(private jobs: JobService) {}

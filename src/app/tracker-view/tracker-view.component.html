@@ -1,10 +1,13 @@
 <div *ngIf="run" class="char-list" [style.color]="textcolor ? textcolor : ''"
     [style.backgroundColor]="bgcolor ? bgcolor : ''">
     <div *ngFor="let char of characters" class="char" [style.width]="charWidth ? charWidth + 'px' : ''">
-        <div class="portrait" [style.backgroundImage]="'url(\'assets/portraits/' + char.name + '.png\')'"></div>
+        <div class="portrait" [style.backgroundImage]="'url(\'assets/portraits/' + char.name + '.png\')'"
+            [style.height]="portraitSize ? portraitSize + 'px': ''"
+            [style.width]="portraitSize ? portraitSize + 'px': ''"></div>
         <div class="info">
-            <div class="job">{{getJob(char.name)}}</div>
-            <div class="materia-list" *ngIf="showMateria">{{getMateria(char.name)}}</div>
+            <div class="job" [style.fontSize]="jobTextSize ? jobTextSize + 'px' : ''">{{getJob(char.name)}}</div>
+            <div class="materia-list" *ngIf="showMateria"
+                [style.fontSize]="materiaTextSize ? materiaTextSize + 'px' : ''">>{{getMateria(char.name)}}</div>
         </div>
     </div>
 </div>

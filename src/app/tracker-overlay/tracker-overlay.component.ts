@@ -19,6 +19,9 @@ export class TrackerOverlayComponent implements OnInit {
   bgcolor: string;
   showMateria: boolean;
   charWidth: number;
+  portraitSize: number;
+  jobTextSize: number;
+  materiaTextSize: number;
 
   constructor(private route: ActivatedRoute, private service: RunsService) {}
 
@@ -40,6 +43,9 @@ export class TrackerOverlayComponent implements OnInit {
       this.bgcolor = params['bgcolor'.toString()];
       this.showMateria = params['showMateria'.toString()] === 'true';
       this.charWidth = +params['charWidth'.toString()];
+      this.portraitSize = +params['portraitSize'.toString()];
+      this.jobTextSize = +params['jobTextSize'.toString()];
+      this.materiaTextSize = +params['materiaTextSize'.toString()];
     });
 
     // TODO: unsubscribe from previous run
