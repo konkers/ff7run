@@ -10,7 +10,7 @@ import { RunsService } from '../runs.service';
 @Component({
   selector: 'app-tracker-overlay',
   templateUrl: './tracker-overlay.component.html',
-  styleUrls: ['./tracker-overlay.component.scss']
+  styleUrls: ['./tracker-overlay.component.scss'],
 })
 export class TrackerOverlayComponent implements OnInit {
   run$: Observable<RunState>;
@@ -20,8 +20,7 @@ export class TrackerOverlayComponent implements OnInit {
   showMateria: boolean;
   charWidth: number;
 
-
-  constructor(private route: ActivatedRoute, private service: RunsService) { }
+  constructor(private route: ActivatedRoute, private service: RunsService) {}
 
   ngOnInit() {
     this.run$ = this.route.paramMap.pipe(
@@ -36,7 +35,7 @@ export class TrackerOverlayComponent implements OnInit {
       })
     );
 
-    this.route.queryParams.subscribe((params) => {
+    this.route.queryParams.subscribe(params => {
       this.textcolor = params['textcolor'.toString()];
       this.bgcolor = params['bgcolor'.toString()];
       this.showMateria = params['showMateria'.toString()] === 'true';
@@ -49,5 +48,4 @@ export class TrackerOverlayComponent implements OnInit {
       this.run = r;
     });
   }
-
 }

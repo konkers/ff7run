@@ -76,7 +76,7 @@ export class RunComponent implements OnInit {
     private router: Router,
     private service: RunsService,
     private jobs: JobService
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.afa.user.subscribe(user => {
@@ -123,7 +123,11 @@ export class RunComponent implements OnInit {
 
     this.overlayUrl =
       window.location.origin +
-      this.router.createUrlTree(['overlay', this.userId, this.id], { queryParams: params }).toString();
+      this.router
+        .createUrlTree(['overlay', this.userId, this.id], {
+          queryParams: params,
+        })
+        .toString();
   }
 
   jobUnlocked(character: string): boolean {

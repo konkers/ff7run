@@ -41,7 +41,12 @@ describe('RunComponent', () => {
         NoopAnimationsModule,
         RouterTestingModule,
       ],
-      declarations: [CharacterComponent, MateriaComponent, RunComponent, TrackerViewComponent],
+      declarations: [
+        CharacterComponent,
+        MateriaComponent,
+        RunComponent,
+        TrackerViewComponent,
+      ],
       providers: [
         { provide: AngularFireAuth, useValue: angularFireAuthStub },
         { provide: AngularFireFunctions, useValue: angularFireFunctionsStub },
