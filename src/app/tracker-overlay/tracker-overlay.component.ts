@@ -8,16 +8,20 @@ import { RunState, character_list } from '@shared';
 import { RunsService } from '../runs.service';
 
 @Component({
-  selector: 'app-overlay',
-  templateUrl: './overlay.component.html',
-  styleUrls: ['./overlay.component.scss'],
+  selector: 'app-tracker-overlay',
+  templateUrl: './tracker-overlay.component.html',
+  styleUrls: ['./tracker-overlay.component.scss']
 })
-export class OverlayComponent implements OnInit {
-  characters = character_list();
+export class TrackerOverlayComponent implements OnInit {
   run$: Observable<RunState>;
   run: RunState;
+  textcolor: string;
+  bgcolor: string;
+  showMateria: boolean;
+  charWidth: number;
 
-  constructor(private route: ActivatedRoute, private service: RunsService) {}
+
+  constructor(private route: ActivatedRoute, private service: RunsService) { }
 
   ngOnInit() {
     this.run$ = this.route.paramMap.pipe(
@@ -32,6 +36,13 @@ export class OverlayComponent implements OnInit {
       })
     );
 
+    this.route.queryParams.subscribe((params) => {
+      this.textcolor = params['textcolor'.toString()];
+      this.bgcolor = params['bgcolor'.toString()];
+      this.showMateria = params['showMateria'.toString()] === 'true';
+      this.charWidth = +params['charWidth'.toString()];
+    });
+
     // TODO: unsubscribe from previous run
     this.run$.subscribe(r => {
       console.log(r);
@@ -39,20 +50,4 @@ export class OverlayComponent implements OnInit {
     });
   }
 
-  getJob(character: string): string {
-    const job = this.run.data.job_data.jobs[character];
-    if (job) {
-      let name = job.name;
-      if (job.has_lure) {
-        name = name + ', Rancher';
-      }
-      if (job.has_underwater) {
-        name = name + ', Swimmer';
-      }
-
-      return name;
-    } else {
-      return '?????';
-    }
-  }
 }

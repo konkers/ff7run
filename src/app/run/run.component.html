@@ -5,12 +5,62 @@
         </app-character>
     </div>
 </div>
-<div>
-    <mat-form-field class="overlay-url">
-        <mat-label>Overlay URL</mat-label>
-        <input matInput disabled [value]="overlayUrl">
-        <button mat-button matSuffix mat-icon-button aria-label="Copy" (click)="copyValue(overlayUrl)">
-            <mat-icon>file_copy</mat-icon>
-        </button>
-    </mat-form-field>
-</div>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Tracker Overlay</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field class="overlay-url">
+            <mat-label>URL</mat-label>
+            <input matInput disabled [value]="overlayUrl">
+            <button mat-button matSuffix mat-icon-button aria-label="Copy" (click)="copyValue(overlayUrl)">
+                <mat-icon>file_copy</mat-icon>
+            </button>
+        </mat-form-field>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Customize
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <h2>Options</h2>
+
+            <section>
+                Colors are hex values like #ff0000.
+            </section>
+            <section>
+                <mat-form-field class="form-field">
+                    <mat-label>Text Color</mat-label>
+                    <input matInput type="text" [(ngModel)]="textColor">
+                    <button mat-button *ngIf="textColor" matSuffix mat-icon-button aria-label="Clear"
+                        (click)="textColor=''">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </mat-form-field>
+
+                <mat-form-field class="form-field">
+                    <mat-label>Background Color</mat-label>
+                    <input matInput type="text" [(ngModel)]="overlayBgColor">
+                    <button mat-button *ngIf="overlayBgColor" matSuffix mat-icon-button aria-label="Clear"
+                        (click)="overlayBgColor=''">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </mat-form-field>
+            </section>
+            <section>
+                <mat-checkbox class="check-option" [(ngModel)]="setCharWidth">Custom Character Box Width</mat-checkbox>
+                <mat-slider [ngModel]="charWidth" [disabled]="!setCharWidth" (input)="charWidth = $event.value"
+                    thumbLabel="true" min=100 max=1000>
+                </mat-slider>
+            </section>
+            <section>
+                <mat-checkbox class="check-option" [(ngModel)]="showMateria">Show Materia</mat-checkbox>
+            </section>
+
+            <h2>Preview</h2>
+            <app-tracker-view [run]="run" [textcolor]="textColor" [bgcolor]="overlayBgColor" [showMateria]="showMateria"
+                [charWidth]="charWidth"></app-tracker-view>
+
+        </mat-expansion-panel>
+    </mat-card-content>
+</mat-card>

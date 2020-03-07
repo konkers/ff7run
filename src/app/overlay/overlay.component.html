@@ -1,6 +1,0 @@
-<div *ngIf="run" class="char-list">
-    <div *ngFor="let char of characters" class="char">
-        <div class="portrait" [style.backgroundImage]="'url(\'assets/portraits/' + char.name + '.png\')'"></div>
-        <div class="job">{{getJob(char.name)}}</div>
-    </div>
-</div>

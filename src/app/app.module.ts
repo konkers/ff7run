@@ -1,5 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
@@ -14,12 +15,15 @@ import {
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatJumbotronModule } from '@angular-material-extensions/jumbotron';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -35,7 +39,8 @@ import { CharacterComponent } from './character/character.component';
 import { MateriaComponent } from './materia/materia.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { RunListComponent } from './run-list/run-list.component';
-import { OverlayComponent } from './overlay/overlay.component';
+import { TrackerViewComponent } from './tracker-view/tracker-view.component';
+import { TrackerOverlayComponent } from './tracker-overlay/tracker-overlay.component';
 
 const debugProviders = environment.production
   ? []
@@ -58,7 +63,8 @@ const debugProviders = environment.production
     MateriaComponent,
     ToolbarComponent,
     RunListComponent,
-    OverlayComponent,
+    TrackerViewComponent,
+    TrackerOverlayComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,15 +74,19 @@ const debugProviders = environment.production
     AngularFirestoreModule,
     AngularFireFunctionsModule,
     BrowserAnimationsModule,
+    FormsModule,
 
     MatButtonModule,
     MatCardModule,
+    MatCheckboxModule,
     MatDividerModule,
+    MatExpansionModule,
     MatIconModule,
     MatInputModule,
     MatJumbotronModule,
     MatMenuModule,
     MatProgressSpinnerModule,
+    MatSliderModule,
     MatSlideToggleModule,
     MatTableModule,
     MatToolbarModule,
