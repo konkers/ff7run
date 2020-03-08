@@ -1,6 +1,7 @@
 <mat-card>
     <mat-card-header>
-        <div mat-card-avatar class="portrait" [style.backgroundImage]="'url(\'assets/portraits/' + name + '.png\')'">
+        <div mat-card-avatar class="portrait"
+            [style.backgroundImage]="'url(\'assets/portraits/' + name + '.png\')'">
         </div>
         <mat-card-title>{{name}}</mat-card-title>
         <mat-card-subtitle *ngIf="job">
@@ -12,7 +13,8 @@
     </mat-card-header>
     <mat-card-content>
         <div class="materia-list" *ngIf="job">
-            <app-materia *ngFor="let materia of getMateria(job)" [name]="materia"></app-materia>
+            <app-materia *ngFor="let materia of getMateria(job)"
+                [name]="materia"></app-materia>
             <app-materia *ngIf="hasLure" name="Chocobo Lure"></app-materia>
             <app-materia *ngIf="hasUnderwater" name="Underwater"></app-materia>
         </div>
