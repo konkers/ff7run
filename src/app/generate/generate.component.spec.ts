@@ -4,6 +4,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireFunctions } from '@angular/fire/functions';
+
+import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -24,6 +26,7 @@ describe('GenerateComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
+        MatCardModule,
         MatDividerModule,
         MatProgressSpinnerModule,
         MatSlideToggleModule,

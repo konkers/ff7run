@@ -12,12 +12,20 @@ import { auth } from 'firebase/app';
 export class AppComponent implements OnInit {
   title = 'ff7run';
   showHeader = true;
+  contentClass = 'content';
 
   constructor(private router: Router, public afa: AngularFireAuth) {}
 
   ngOnInit() {
     this.router.events.subscribe(() => {
       this.showHeader = !this.router.url.includes('overlay');
+      if (!this.showHeader) {
+        this.contentClass = 'overlay';
+      } else if (this.router.url === '/') {
+        this.contentClass = 'content';
+      } else {
+        this.contentClass = 'content padded';
+      }
     });
   }
 

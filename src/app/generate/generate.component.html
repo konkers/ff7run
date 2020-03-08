@@ -1,33 +1,27 @@
-<header class="docs-header-background">
-    <div class="docs-header-section">
-        <div class="docs-header-headline">
-            <h1 class="mat-h1">Shinra Employment Services</h1>
-            <h2>a FF VII challenge run</h2>
-        </div>
-        <div class="docs-header-start">
-            <span *ngIf="afa.user | async as user; else showLogin">
-                <span *ngIf="!requesting">
-                    <button mat-raised-button (click)="onNewRun()">New Run</button>
-                    <span class="spacer"></span>
-                    <button mat-raised-button (click)="gotoRuns()">My Runs</button>
-
-                </span>
-                <span class="center" *ngIf="requesting">
-                    <mat-progress-spinner color="accent" mode="indeterminate">
-                    </mat-progress-spinner>
-                </span>
-
+<div class="center">
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>New Run</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="content">
+            <h3 class="mat-h3">Options</h3>
+            <div class="flags" *ngIf="!requesting">
+                <mat-slide-toggle color="accent" [checked]="config.unique_jobs"
+                    (change)="config.unique_jobs = $event.checked">
+                    Ensure unique jobs.
+                </mat-slide-toggle>
+            </div>
+            <span class="center" *ngIf="requesting">
+                <mat-progress-spinner color="accent" mode="indeterminate">
+                </mat-progress-spinner>
             </span>
-            <ng-template #showLogin>
-                <button mat-raised-button (click)="login()">login</button>
-            </ng-template>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="flags">
-            <mat-slide-toggle color="accent" [checked]="config.unique_jobs"
-                (change)="config.unique_jobs = $event.checked">
-                Ensure unique jobs.
-            </mat-slide-toggle>
-        </div>
-    </div>
-</header>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button *ngIf="afa.user | async"
+                (click)="onNewRun()">GENERATE</button>
+            <button mat-button *ngIf="(afa.user | async) === null"
+                (click)="login()">LOGIN</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

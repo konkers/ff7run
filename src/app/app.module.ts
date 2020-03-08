@@ -41,6 +41,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { RunListComponent } from './run-list/run-list.component';
 import { TrackerViewComponent } from './tracker-view/tracker-view.component';
 import { TrackerOverlayComponent } from './tracker-overlay/tracker-overlay.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const debugProviders = environment.production
   ? []
@@ -65,6 +66,7 @@ const debugProviders = environment.production
     RunListComponent,
     TrackerViewComponent,
     TrackerOverlayComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,

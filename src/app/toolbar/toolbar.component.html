@@ -1,9 +1,21 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <span><a class="title" [routerLink]="['/']">Shinra Employment Services</a></span>
+        <a mat-button class="button" routerLink="/"><img class="logo"
+                src="../../assets/logo-plain.png">
+            <span>
+                SES
+            </span>
+        </a>
+
+        <a mat-button class="button" routerLink="/gen">New Run</a>
+        <a mat-button class="button" routerLink="/runs"
+            *ngIf="afa.user | async">My Runs</a>
+
         <span class="spacer"></span>
         <span *ngIf="afa.user | async as user; else showLogin">
-            <button mat-mini-fab class="profile" [style.backgroundImage]="'url(' + user.photoURL + ')'" mat-button>
+            <button mat-mini-fab class="profile"
+                [style.backgroundImage]="'url(' + user.photoURL + ')'"
+                mat-button>
             </button>
         </span>
         <ng-template #showLogin>
@@ -15,8 +27,10 @@
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="gotoRuns()">My Runs</button>
-            <button mat-menu-item (click)="logout()">Logout</button>
+            <button mat-menu-item (click)="gotoRuns()"
+                *ngIf="afa.user | async">My Runs</button>
+            <button mat-menu-item (click)="logout()"
+                *ngIf="afa.user | async">Logout</button>
         </mat-menu>
 
     </mat-toolbar-row>

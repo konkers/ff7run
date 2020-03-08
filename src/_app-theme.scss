@@ -2,6 +2,7 @@
 // Plus imports for other components in your app.
 @import './app/generate/generate-theme';
 @import './app/toolbar/toolbar-theme';
+@import './app/welcome/welcome-theme';
 
 @mixin ff7run-app-theme($theme) {
   $primary: map-get($theme, primary);
@@ -16,15 +17,20 @@
     color: mat-color($primary, default-contrast);
   }
 
+  a {
+    color: mat-color($accent);
+  }
+
   @include generate-theme($theme);
   @include toolbar-theme($theme);
+  @include welcome-theme($theme);
 }
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$primary: mat-palette($mat-indigo);
-$accent: mat-palette($mat-pink, A200, A100, A400);
+$primary: mat-palette($mat-brown);
+$accent: mat-palette($mat-red, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $warn: mat-palette($mat-red);
