@@ -27,6 +27,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -92,6 +93,7 @@ const debugProviders = environment.production
     MatSlideToggleModule,
     MatTableModule,
     MatToolbarModule,
+    MatTooltipModule,
   ],
   providers: debugProviders,
   bootstrap: [AppComponent],

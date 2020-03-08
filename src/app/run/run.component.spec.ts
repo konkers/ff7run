@@ -11,6 +11,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { RunComponent } from './run.component';
@@ -38,6 +39,7 @@ describe('RunComponent', () => {
         MatIconModule,
         MatInputModule,
         MatSliderModule,
+        MatTooltipModule,
         NoopAnimationsModule,
         RouterTestingModule,
       ],

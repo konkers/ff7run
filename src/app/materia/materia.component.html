@@ -1,1 +1,2 @@
-<div *ngIf="materia" class="materia {{materia.ty}}">{{materia.name}}</div>
+<div *ngIf="materia" class="materia {{materia.ty}}"
+    [matTooltip]="materia.location">{{materia.name}}</div>
