@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 import { MateriaComponent } from './materia.component';
 
 describe('MateriaComponent', () => {
@@ -8,6 +10,7 @@ describe('MateriaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MatTooltipModule],
       declarations: [MateriaComponent],
     }).compileComponents();
   }));
