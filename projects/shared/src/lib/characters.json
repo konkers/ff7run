@@ -35,12 +35,12 @@
         "can_underwater": true
     },
     {
-        "name": "Cid",
+        "name": "Vincent",
         "can_lure": false,
         "can_underwater": true
     },
     {
-        "name": "Vincent",
+        "name": "Cid",
         "can_lure": false,
         "can_underwater": true
     }
