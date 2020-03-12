@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 import { Observable } from 'rxjs';
 
-import { RunState, character_list } from '@shared';
+import { RunState, RunStatus, character_list } from '@shared';
 
 import { RunsService } from '../runs.service';
 
@@ -13,16 +13,22 @@ import { RunsService } from '../runs.service';
   styleUrls: ['./run-list.component.scss'],
 })
 export class RunListComponent implements OnInit {
-  displayedColumns: string[] = ['updated', 'status', 'unlocked'];
+  displayedColumns: string[] = ['updated', 'unlocked'];
   runs$: Observable<RunState[]>;
   runs: RunState[];
+  activeRuns: RunState[];
+  completeRuns: RunState[];
 
   constructor(private router: Router, private service: RunsService) {
     this.runs$ = service.getRuns();
-    this.runs$.subscribe(runs => (this.runs = runs));
+    this.runs$.subscribe(runs => {
+      this.activeRuns = runs.filter((run: RunState) => run.status === RunStatus.Active);
+      this.completeRuns = runs.filter((run: RunState) => run.status === RunStatus.Finished);
+      this.runs = runs;
+    });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   gotoRun(run: string) {
     this.router.navigate([`/run/${run}`]);

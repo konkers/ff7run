@@ -4,6 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireFunctions } from '@angular/fire/functions';
+import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 
 import { RunListComponent } from './run-list.component';
@@ -20,7 +21,7 @@ describe('RunListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatTableModule, RouterTestingModule],
+      imports: [MatCardModule, MatTableModule, RouterTestingModule],
       declarations: [RunListComponent],
       providers: [
         { provide: AngularFireAuth, useValue: angularFireAuthStub },

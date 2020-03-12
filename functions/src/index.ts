@@ -7,10 +7,12 @@ import {
   RunConfig,
   RunData,
   RunState,
+  RunStatus,
   RunType,
   UnlockJobCommand,
   ApiCommand,
   character_list,
+  UpdateRunStateCommand,
 } from '../../projects/shared/src/public-api';
 
 export class BackendDriver extends DefaultDriver {
@@ -96,6 +98,13 @@ async function handleUnlockJob(cmd: UnlockJobCommand, context: any) {
       .get()
   ).data() as RunState;
 
+  if (state.status !== RunStatus.Active) {
+    throw new functions.https.HttpsError(
+      'invalid-argument',
+      'Can not unlock job run run is not active.'
+    );
+  }
+
   if (cmd.name in state.data.job_data.jobs) {
     return;
   }
@@ -121,12 +130,51 @@ async function handleUnlockJob(cmd: UnlockJobCommand, context: any) {
   return;
 }
 
+async function handleUpdateJobState(cmd: UpdateRunStateCommand, context: any) {
+  if (!context.auth) {
+    throw new functions.https.HttpsError(
+      'permission-denied',
+      'Must be logged in to create a run.'
+    );
+  }
+
+  const db = admin.firestore();
+  const state = (
+    await states(db, context)
+      .doc(cmd.run_id)
+      .get()
+  ).data() as RunState;
+
+  if (state.status !== RunStatus.Active) {
+    throw new functions.https.HttpsError(
+      'invalid-argument',
+      'Can not update run because it is not active.'
+    );
+  }
+
+  state.status = cmd.new_status;
+  const now = admin.firestore.Timestamp.now();
+  state.timestamp = now;
+  state.log.push({
+    when: now,
+    message: `Status set to ${cmd.new_status}.`,
+  });
+
+  await states(db, context)
+    .doc(cmd.run_id)
+    .set(state);
+
+  return;
+}
+
 export const command = functions.https.onCall(
   async (cmd: ApiCommand, context): Promise<any> => {
     if (cmd.newRun) {
       return await handleNewRun(cmd.newRun, context);
     } else if (cmd.unlockJob) {
       await handleUnlockJob(cmd.unlockJob, context);
+    } else if (cmd.updateRunState) {
+      await handleUpdateJobState(cmd.updateRunState, context);
     }
   }
 );
