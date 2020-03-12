@@ -12,11 +12,12 @@ export class CharacterComponent implements OnInit {
   @Input() job: string;
   @Input() hasLure: boolean;
   @Input() hasUnderwater: boolean;
+  @Input() runActive: boolean;
   @Output() unlock = new EventEmitter();
 
-  constructor(private jobs: JobService) {}
+  constructor(private jobs: JobService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   getMateria(job: string): string[] {
     return this.jobs.getJob(job).materia;

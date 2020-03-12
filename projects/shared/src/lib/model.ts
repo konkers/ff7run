@@ -94,14 +94,14 @@ export interface UnlockJobCommand {
   name: string;
 }
 
-export interface UpdateJobStateCommand {
+export interface UpdateRunStateCommand {
   run_id: string;
-  new_state: RunStatus;
+  new_status: RunStatus;
 }
 
 export interface ApiCommand {
   ping?: boolean;
   newRun?: RunConfig;
   unlockJob?: UnlockJobCommand;
-  updateJobState?: UpdateJobStateCommand;
+  updateRunState?: UpdateRunStateCommand;
 }

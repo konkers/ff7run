@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+
 
 import { Observable, from } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
 import { AngularFireAuth } from '@angular/fire/auth';
 
-import { RunState, character_list } from '@shared';
+import { RunState, RunStatus, character_list } from '@shared';
 
 import { RunsService } from '../runs.service';
 import { JobService } from '../job.service';
+
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-run',
@@ -23,6 +28,7 @@ export class RunComponent implements OnInit {
   run: RunState;
   id: string;
   userId: string;
+  runActive: boolean;
   overlayUrl: string;
 
   overlayBgColorData: string;
@@ -74,9 +80,10 @@ export class RunComponent implements OnInit {
     private afa: AngularFireAuth,
     private route: ActivatedRoute,
     private router: Router,
+    public dialog: MatDialog,
     private service: RunsService,
     private jobs: JobService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.afa.user.subscribe(user => {
@@ -99,6 +106,7 @@ export class RunComponent implements OnInit {
     this.run$.subscribe(r => {
       console.log(r);
       this.run = r;
+      this.runActive = r.status === RunStatus.Active;
     });
   }
 
@@ -177,5 +185,25 @@ export class RunComponent implements OnInit {
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
+  }
+
+  updateRunDialog(question: string, status: RunStatus) {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      width: '250px',
+      data: { question }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === true) {
+        this.service.updateRun(this.id, status);
+      }
+    });
+  }
+  onCompleteRun() {
+    this.updateRunDialog('Complete run?', RunStatus.Finished);
+  }
+
+  onAbandonRun() {
+    this.updateRunDialog('Abandon run?', RunStatus.Abandoned);
   }
 }

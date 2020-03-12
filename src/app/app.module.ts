@@ -16,6 +16,7 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
@@ -43,6 +44,7 @@ import { RunListComponent } from './run-list/run-list.component';
 import { TrackerViewComponent } from './tracker-view/tracker-view.component';
 import { TrackerOverlayComponent } from './tracker-overlay/tracker-overlay.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 const debugProviders = environment.production
   ? []
@@ -68,7 +70,9 @@ const debugProviders = environment.production
     TrackerViewComponent,
     TrackerOverlayComponent,
     WelcomeComponent,
+    ConfirmDialogComponent,
   ],
+  entryComponents: [ConfirmDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -82,6 +86,7 @@ const debugProviders = environment.production
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
+    MatDialogModule,
     MatDividerModule,
     MatExpansionModule,
     MatIconModule,
