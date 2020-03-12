@@ -16,8 +16,8 @@
     },
     {
         "name": "Aerith",
-        "can_lure": true,
-        "can_underwater": true
+        "can_lure": false,
+        "can_underwater": false
     },
     {
         "name": "Red XIII",
