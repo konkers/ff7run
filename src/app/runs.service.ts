@@ -19,8 +19,8 @@ export class RunsService {
   ) {}
 
   public newRun(config: JobRunConfig): Observable<string> {
-    const callable = this.fns.httpsCallable('newRun');
-    return callable({ ty: 'job', job_config: config });
+    const callable = this.fns.httpsCallable('command');
+    return callable({ newRun: { ty: 'job', job_config: config } });
   }
 
   public getRun(id: string): Observable<RunState> {
@@ -53,7 +53,7 @@ export class RunsService {
   }
 
   public unlockJob(runId: string, name: string) {
-    const callable = this.fns.httpsCallable('unlockJob');
-    callable({ run_id: runId, name });
+    const callable = this.fns.httpsCallable('command');
+    callable({ unlockJob: { run_id: runId, name } });
   }
 }
