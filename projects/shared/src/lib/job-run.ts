@@ -40,6 +40,7 @@ export class JobRunGenerator {
         name: jobList[jobIndex].name,
         has_lure: false,
         has_underwater: false,
+        has_morph: false,
       };
 
       if (config.job_config && config.job_config.unique_jobs) {
@@ -54,6 +55,9 @@ export class JobRunGenerator {
 
     const underwaterChars = character_list().filter(c => c.can_underwater);
     plan.job_data.jobs[this.pickChar(underwaterChars)].has_underwater = true;
+
+    const morphChars = character_list().filter(c => c.can_morph);
+    plan.job_data.jobs[this.pickChar(morphChars)].has_morph = true;
 
     // Start the current run with cloud unlocked.
     const data: RunData = {
