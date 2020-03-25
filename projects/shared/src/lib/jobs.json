@@ -228,6 +228,7 @@
         "materia": [
             "Master Magic",
             "Master Command",
+            "Counter",
             "Mime",
             "HP Plus",
             "Luck Plus",
@@ -264,7 +265,6 @@
         "materia": [
             "Contain",
             "Ultima",
-            "All",
             "Magic Counter",
             "W-Summon",
             "Long Range",
@@ -306,6 +306,7 @@
             "Transform",
             "Added Effect",
             "Counter",
+            "Sense",
             "Magic Counter",
             "Manipulate",
             "Enemy Away",
