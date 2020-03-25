@@ -453,7 +453,7 @@
         "name": "Mega All"
     },
     {
-        "ty": "summon",
+        "ty": "independent",
         "effects": [
             "Removes timer from Emerald Weapon fight."
         ],
@@ -589,7 +589,7 @@
         "name": "Knights of the Round"
     },
     {
-        "ty": "support",
+        "ty": "summon",
         "effects": [
             "All summons in one delicious package"
         ],
