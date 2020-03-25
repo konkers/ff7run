@@ -12,6 +12,7 @@ export class CharacterComponent implements OnInit {
   @Input() job: string;
   @Input() hasLure: boolean;
   @Input() hasUnderwater: boolean;
+  @Input() hasMorph: boolean;
   @Input() runActive: boolean;
   @Output() unlock = new EventEmitter();
 

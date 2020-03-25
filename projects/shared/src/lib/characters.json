@@ -2,46 +2,55 @@
     {
         "name": "Cloud",
         "can_lure": true,
-        "can_underwater": true
+        "can_underwater": true,
+        "can_morph": true
     },
     {
         "name": "Barret",
         "can_lure": true,
-        "can_underwater": true
+        "can_underwater": true,
+        "can_morph": true
     },
     {
         "name": "Tifa",
         "can_lure": true,
-        "can_underwater": true
+        "can_underwater": true,
+        "can_morph": true
     },
     {
         "name": "Aerith",
         "can_lure": false,
-        "can_underwater": false
+        "can_underwater": false,
+        "can_morph": false
     },
     {
         "name": "Red XIII",
         "can_lure": true,
-        "can_underwater": true
+        "can_underwater": true,
+        "can_morph": true
     },
     {
         "name": "Yuffie",
         "can_lure": false,
-        "can_underwater": true
+        "can_underwater": true,
+        "can_morph": true
     },
     {
         "name": "Cait Sith",
         "can_lure": false,
-        "can_underwater": true
+        "can_underwater": true,
+        "can_morph": true
     },
     {
         "name": "Vincent",
         "can_lure": false,
-        "can_underwater": true
+        "can_underwater": true,
+        "can_morph": true
     },
     {
         "name": "Cid",
         "can_lure": false,
-        "can_underwater": true
+        "can_underwater": true,
+        "can_morph": true
     }
 ]

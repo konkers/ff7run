@@ -4,6 +4,7 @@
         </div>
         <mat-card-title>{{name}}</mat-card-title>
         <mat-card-subtitle *ngIf="job">
+            <span *ngIf="hasMorph">Mighty Morphin' </span>
             {{job}}
             <span *ngIf="hasLure">, Rancher</span>
             <span *ngIf="hasUnderwater">, Swimmer</span>
@@ -15,6 +16,7 @@
             <app-materia *ngFor="let materia of getMateria(job)" [name]="materia"></app-materia>
             <app-materia *ngIf="hasLure" name="Chocobo Lure"></app-materia>
             <app-materia *ngIf="hasUnderwater" name="Underwater"></app-materia>
+            <app-materia *ngIf="hasMorph" name="Morph"></app-materia>
         </div>
         <div class="materia-list" *ngIf="!job && runActive">
             <button mat-raised-button color="primary" (click)="onUnlock()">

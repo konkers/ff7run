@@ -19,6 +19,7 @@ export interface CharacterInfo {
   name: string;
   can_lure: boolean;
   can_underwater: boolean;
+  can_morph: boolean;
 }
 
 export interface Job {
@@ -42,6 +43,7 @@ export interface JobInfo {
   name: string;
   has_lure: boolean;
   has_underwater: boolean;
+  has_morph: boolean;
 }
 
 export interface JobAliases {

@@ -169,6 +169,15 @@ export class RunComponent implements OnInit {
     }
   }
 
+  hasMorph(character: string): boolean {
+    const job = this.run.data.job_data.jobs[character];
+    if (job) {
+      return job.has_morph;
+    } else {
+      return false;
+    }
+  }
+
   unlockCharacter(character: string) {
     this.service.unlockJob(this.id, character);
   }

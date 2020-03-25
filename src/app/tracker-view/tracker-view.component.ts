@@ -49,6 +49,9 @@ export class TrackerViewComponent implements OnInit {
       if (job.has_underwater) {
         name = name + ', Swimmer';
       }
+      if (job.has_morph) {
+        name = 'Mighty Morphin\' ' + name;
+      }
 
       return name;
     } else {
