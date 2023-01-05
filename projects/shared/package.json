@@ -8,6 +8,6 @@
     "firebase": "^7.8.2"
   },
   "devDependencies": {
-    "json5": "^2.1.1"
+    "json5": "^2.2.2"
   }
 }
